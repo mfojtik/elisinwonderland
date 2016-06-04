@@ -1,0 +1,59 @@
+/**
+ * Inevitable fixes for that browser forged in Hell
+ */
+
+/* Layout fix */
+
+.container {
+  max-width: 1170px;
+  max-width: 73.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.container .main-content {
+  width: 65.81197%;
+  float: left;
+  margin-right: 2.5641%;
+}
+.container .right-sidebar {
+  width: 31.62393%;
+  float: right;
+}
+
+.full-width .main-content {
+  width: 100%;
+  float: left;
+}
+
+/* Fix the Postscripts */
+
+#postscript .widget {
+  width: 23.07692%;
+  float: left;
+}
+#postscript .widget:nth-child(4n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+#postscript .widget:nth-child(4n + 2) {
+  margin-left: 25.64103%;
+  margin-right: -100%;
+  clear: none;
+}
+#postscript .widget:nth-child(4n + 3) {
+  margin-left: 51.28205%;
+  margin-right: -100%;
+  clear: none;
+}
+#postscript .widget:nth-child(4n + 4) {
+  margin-left: 76.92308%;
+  margin-right: -100%;
+  clear: none;
+}

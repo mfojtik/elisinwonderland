@@ -1,0 +1,23 @@
+// Responsive Img
+
+.responsive {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+}
+
+//Clearfix
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+ *zoom:1;
+}

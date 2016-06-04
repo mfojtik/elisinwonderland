@@ -1,0 +1,9 @@
+#footer {
+	clear: both;
+	color: #ffffff;
+	font-family: $header-font;
+	text-align: center;
+	background: $secondary-color;
+	@include adjust-font-size-to(18px, 1);
+	@include rhythm(0,0.5,0.5,0);
+}
