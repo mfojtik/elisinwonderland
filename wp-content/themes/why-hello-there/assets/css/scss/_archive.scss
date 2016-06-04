@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Styles for archive, catgory, author pages, etc. 
+   ========================================================================== */
+
+.page-title, .archive-title {
+	color: tint($primary-color, 30);
+	font-family: $header-font;
+	font-size: $base-font-size;
+	font-weight: normal;
+	text-transform: uppercase;
+	&:before {
+		display: block;
+		color: $secondary-color;
+		float: left;
+		content: "\f187";
+		font-family: FontAwesome;
+		padding-right: 5px;
+	}
+}
+
+.archive-title {
+	color: tint($primary-color, 30);
+	font-family: $header-font;
+	font-size: $base-font-size;
+	font-weight: normal;
+	text-transform: uppercase;
+	&:before {
+		display: block;
+		color: $secondary-color;
+		float: left;
+		content: "\f007";
+		font-family: FontAwesome;
+		padding-right: 5px;
+	}
+}
+
+.author-description,
+.taxonomy-description {
+	@include margin-trailer(1);
+}

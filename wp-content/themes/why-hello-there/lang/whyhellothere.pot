@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Why Hello There\n"
+"POT-Creation-Date: 2014-04-21 23:22-0400\n"
+"PO-Revision-Date: 2014-04-21 23:22-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:6
+msgid "Whoops.  Looks like there's nothing here!"
+msgstr ""
+
+#: ../404.php:8
+msgid ""
+"Sorry, nothing was found at this location. I wonder what happened? Anyway, "
+"how about a search?"
+msgstr ""
+
+#: ../archive.php:11
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../archive.php:14
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../archive.php:17
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../archive.php:20
+msgid "Archives"
+msgstr ""
+
+#: ../archive.php:33 ../author.php:22 ../category.php:27 ../index.php:24
+#: ../page.php:24 ../single.php:17 ../tag.php:27
+#: ../page-templates/full-width.php:30
+msgid "No posts were found. Sorry!"
+msgstr ""
+
+#: ../author.php:9
+#, php-format
+msgid "All posts by %s"
+msgstr ""
+
+#: ../category.php:9
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: ../content-page.php:18 ../content.php:35
+msgid "Continue reading..."
+msgstr ""
+
+#: ../content-page.php:20 ../content.php:37
+msgid "Pages:"
+msgstr ""
+
+#: ../content-page.php:29 ../content.php:48
+msgid "Edit"
+msgstr ""
+
+#: ../functions.php:49
+msgid "Primary"
+msgstr ""
+
+#: ../functions.php:171
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../functions.php:208
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: ../functions.php:208
+msgid "[Edit]"
+msgstr ""
+
+#: ../functions.php:217
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../tag.php:9
+#, php-format
+msgid "Tagged in: %s"
+msgstr ""
+
+#: ../inc/options-config.php:41
+msgid "Link Color"
+msgstr ""
+
+#: ../inc/options-config.php:59
+msgid "Enable Front Page Slider"
+msgstr ""
+
+#: ../inc/options-config.php:74
+msgid "Tag for featuring posts on the slider:"
+msgstr ""
+
+#: ../inc/options-config.php:110
+msgid "Facebook page URL:"
+msgstr ""
+
+#: ../inc/options-config.php:125
+msgid "Twitter URL:"
+msgstr ""
+
+#: ../inc/theme-functions.php:35
+msgid "Previous Post"
+msgstr ""
+
+#: ../inc/theme-functions.php:38
+msgid "Next Post"
+msgstr ""

@@ -1,0 +1,42 @@
+/* ==========================================================================
+   General layout - uses Scss, Compass and Susy v2 for responsive grid support.
+   For more info on Susy: 
+   http://susy.oddbird.net/
+   ========================================================================== */
+
+// Susy v2 Settings
+$susy: (
+  columns: 8,
+  gutters: 30px/70px,
+  column-width: 70px,
+  global-box-sizing: border-box,
+);
+
+// Breakpoints
+$computer: min-width 960px;
+
+.container {
+	padding: 0 30px;
+	@include container;
+}
+
+@include susy-breakpoint($computer, 14) {
+	.container {
+		@include container(14);
+		.main-content {
+			@include span(10 of 14);
+		}
+		.right-sidebar {
+			@include span(last 4 of 14);
+		}
+	}
+  .full-width  {
+		.main-content {
+			@include span(14 of 14);
+		}
+	}
+}
+
+.main-inner {
+	padding: $base-line-height 0;
+}

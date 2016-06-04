@@ -1,0 +1,16 @@
+/*
+Theme Name: Why Hello There
+Theme URI: http://siteturner.com/themes/whyhellothere/
+Author: Siteturner
+Author URI: http://siteturner.com/
+Description: A contemporary, flat responsive theme.  Assembled using Sass, Compass and Susy (with sass files and Compass config.rb included).  Includes a right sidebar, full-width page template, postscript widget area, Font-Awesome and a slider for featured posts configurable through WordPress customizer. 
+Version: 1.0.7
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: responsive-layout, two-columns, right-sidebar, full-width-template, sticky-post
+*/
+
+@import url('assets/css/prettyPhoto.css');
+@import url('flexslider/flexslider.css');
+@import url('assets/css/master.css');
+@import url('assets/css/custom.css');

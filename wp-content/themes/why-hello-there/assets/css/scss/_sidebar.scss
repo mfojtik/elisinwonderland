@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Right sidebar styling
+   ========================================================================== */
+
+.right-sidebar .widget {
+	overflow: hidden;
+	text-align: left;
+	@include margin-trailer(1);
+	// @include debug-vertical-alignment; // uncomment to reveal grid for baseline debugging
+	.heading {
+		position: relative;
+		display: block;
+		color: #fff;
+		background: $secondary-color;
+		padding: 0 $hspace/2;
+		@include adjust-leading-to(1.5);
+		@include rhythm(0, 0, 0, 1);
+		&:after {
+			content: "";
+			position: absolute;
+			left: 30px;
+			top: 100%;
+			border-top: 15px solid black;
+			border-top-color: $secondary-color; 
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent; 
+		}
+	}
+	ul {
+		li {
+			display: block;
+			list-style: none;
+			background: #f9f9f9;
+			border-left: 5px solid #eee;
+			padding: 0 15px;
+			@include adjust-leading-to(1.25);
+			@include margin-trailer(0.25);
+			@include transition-duration(0.2s);
+			@include transition-timing-function(ease-in);
+			a {
+				display: block;
+				color: #555;
+			}
+			&:hover {
+				background: #fff;
+				border-left: 5px solid $secondary-color;
+				a {
+					color: #111
+				}
+			}
+		}
+	}
+	ul ul {
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid #fff;
+		list-style-type: disc;
+		li {
+			font-size: 14px;
+			padding: 0 5px;
+			border-left: none;
+			list-style-type: disc;
+			&:hover {
+				background: #ddd;
+				border-left: none;
+			}
+		}
+	}
+}

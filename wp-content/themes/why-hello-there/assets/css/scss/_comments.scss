@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Comment & comment form styling
+   ========================================================================== */
+#comments {
+	@include margin-leader(2);
+}
+
+.comment-list {
+	li {
+		list-style: none;
+		border-bottom: 3px solid #f9f9f9;
+		@include margin-trailer(1);
+		.comment-content {
+			margin-left: 80px;
+			.comment-meta {
+				text-transform: uppercase;
+				font-family: $header-font;
+			}
+			.comment-reply {
+				a {
+					display: inline-block; 
+					background: #f9f9f9;
+					padding: 0 10px;
+					&:hover {
+						color: #fff;
+						background: $secondary-color;
+					}
+				}
+			}
+			.comment-reply:after {
+				content: "\f112";
+				display: inline-block;
+				font-family: FontAwesome;
+				padding-left: 5px;
+			}
+			.comment-awaiting-moderation {
+				display: block;
+				font-weight: bold;
+				font-style: italic;
+			}
+		}
+		ul {
+			li {
+				border-bottom: none;
+				@include margin-trailer(1);
+			}
+		}
+	}
+}
+
+#commentform {
+	margin: 0 80px;
+	.form-allowed-tags {
+		font-size: 14px;
+	}
+	label {
+		display: block;
+		font-size: 14px;
+		font-family: $header-font;
+		text-transform: uppercase;
+	}
+	small {
+		color: #666;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding-left: $base-line-height/2;
+	}
+	input,
+	textarea {
+		display: inline-block;
+		padding: $base-line-height/4;
+		border: 1px solid #ddd;
+	}
+	textarea {
+		display: block;
+		width: 100%;
+		height: rhythm(6);
+		margin: 0;
+	}
+	input[type="submit"] {
+		display: inline-block;
+		color: #fff;
+		font-size: 18px;
+		font-weight: normal;
+		font-family: $header-font;
+		line-height: $base-line-height*2;
+		height: $base-line-height*2;
+		background: $secondary-color;
+		border: none;
+		padding: 0 $base-line-height;
+		cursor: pointer;
+		@include transition-duration(0.2s);
+ 		@include transition-timing-function(ease-in);
+		&:hover {
+			opacity: 0.7;
+		}
+		&:active {
+			margin-top: 2px;
+		}
+	}
+}

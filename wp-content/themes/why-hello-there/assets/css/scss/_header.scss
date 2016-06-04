@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Header styling
+   ========================================================================== */
+
+.site-header-inner {
+	color: #fff;
+	background: $primary-color;
+	z-index: 100;
+  // @include debug-vertical-alignment; // uncomment to reveal grid for baseline debugging
+	a {
+		color: #fff;
+	}
+}
+
+.site-title {
+	float: left;
+	display: block;
+	font-family: 'Voltaire', sans-serif;
+	text-transform: uppercase;
+	background: $secondary-color;
+	padding: 0 15px;
+	margin-bottom: 0;
+	margin-right: 0px;
+	@include adjust-font-size-to(45px, 2);
+	@include transition-property(height);
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease-in);
+	a {
+		display: block;
+		color: #fff;
+		font-weight: normal;
+	}
+}
+
+@media only screen and ( min-width: 960px ) {
+
+	body {
+	}
+
+	body.admin-bar .site-header-inner {
+		margin-top: 32px
+	}	
+
+	.site-header-inner {
+	  width:100%;
+	  color: #fff;
+	  position:fixed;
+	  top:0;
+	  left:0;
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in);
+	}
+
+	.site-header-inner.tiny {
+	  opacity: 0.90;
+	}
+
+	.tiny .site-title {
+		@include adjust-font-size-to(18px, 1);
+	}
+
+	.tiny .menu,
+	.tiny .primary-navigation {
+		@include adjust-leading-to(1);
+		a {
+			display: block;
+			font-size: 15px;
+			@include adjust-leading-to(1);
+		}
+	}
+
+	.tiny .social {
+		@include adjust-leading-to(1);
+		a {
+			background: none;
+			@include transition-duration(0.2s);
+			@include transition-timing-function(ease-in);
+			@include adjust-font-size-to(15px, 1);
+		}
+	}	
+
+	.tiny .header-search {
+		margin-top: 0px;
+		.search-form input[type="search"] {
+			margin-left: 10px;
+		}
+	}
+}
+
+@media only screen and ( max-width: 960px ) {
+
+	.site-title {
+		text-align: center;
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+}

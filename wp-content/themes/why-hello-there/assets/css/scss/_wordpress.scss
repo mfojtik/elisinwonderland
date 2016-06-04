@@ -1,0 +1,283 @@
+/* ==========================================================================
+   Wordpress Core CSS
+   Styling for classes included in Wordpress core
+   ========================================================================== */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+img.centered, .aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+	margin-right: $base-line-height;
+	@include margin-trailer(1);
+}
+
+.alignright {
+	float: right;
+	margin-left: $base-line-height;
+	@include margin-trailer(1);
+}
+
+/* Image captions */
+
+.wp-caption {
+	max-width: 100%;
+	height: auto;	
+	border: 1px solid #eee;
+	text-align: center;
+	background-color: #f9f9f9;
+	padding-top: 5px;
+	@include margin-trailer(1);
+}
+
+.wp-caption img {
+	margin: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	line-height: 1.2em;
+	font-style: italic;
+	color: #666;
+	margin-bottom: 0;
+	padding: $base-line-height;
+	padding-top: $base-line-height - 10;
+}
+
+dl.wp-caption {
+  display: none;
+}
+
+/* .bypostauthor */
+
+.bypostauthor {
+	background: #fff;
+}
+
+/* WP Password Form */
+
+.post-password-form {
+	label {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+
+input[type="submit"],
+input[type="password"],
+input[type="search"] {
+	padding: rhythm(0.25) rhythm(0.5);
+	border: none;
+	background: #eee;
+}
+input[type="submit"] {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #ddd;
+}
+input[type="submit"]:hover {
+	color: #fff;
+	background: $secondary-color;
+}
+
+/* WP Calendar */
+
+#wp-calendar {
+	width: 100%;
+	background: #eee;
+	caption {
+		font-family: 'Holtwood One SC', serif;
+		text-transform: uppercase;
+		@include margin-trailer(1);
+	}
+	thead {
+		tr {
+			background: #e5e5e5;
+		}
+	}
+	th,
+	td {
+		padding: rhythm(0.25);
+		text-align: center;
+		a {
+			font-weight: bold;
+		}
+	}
+	tfoot a {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+
+/* Gallery */
+
+.gallery {;
+	clear: both;
+	@include margin-trailer(1);
+	dl {
+		margin-bottom: 0;
+	}
+	.gallery-item {
+		position: relative;
+		float: left;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.gallery-caption {
+			position: absolute;
+			display: block;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			font-size: 12px;
+			color: #fff;
+			line-height: rhythm(0.5);
+			text-align: center;
+		  background: rgba(0,0,0,0.5);
+			padding: 10px;
+			margin-bottom: 0;
+			opacity: 0;
+			@include transition-duration(0.3s);
+  		@include transition-timing-function(ease-in);
+		}
+		&:hover {
+			.gallery-caption {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.gallery-columns-1 {
+	.gallery-item {
+		width: 25%;
+	}
+}
+
+.gallery-columns-2 {
+	.gallery-item {
+		width: 33.333%;
+	}
+}
+
+.gallery-columns-3 {
+	.gallery-item {
+		width: 33.333%;
+	}
+}
+
+.gallery-columns-4 {
+	.gallery-item {
+		width: 25%;
+	}
+}
+
+.gallery-columns-5 {
+	.gallery-item {
+		width: 20%;
+	}
+}
+
+.gallery-columns-6 {
+	.gallery-item {
+		width: 16.666%;
+	}
+}
+
+.gallery-columns-7 {
+	.gallery-item {
+		width: 14%;
+	}
+}
+
+.gallery-columns-8 {
+	.gallery-item {
+		width: 12.5%;
+	}
+}
+
+.gallery-columns-9 {
+	.gallery-item {
+		width: 11%;
+	}
+}
+
+.gallery-columns-5,
+.gallery-columns-6,
+.gallery-columns-7,
+.gallery-columns-8,
+.gallery-columns-9 {
+	.gallery-item {
+		.gallery-caption {
+			display: none;
+		}
+	}
+}
+
+/* Search Form */
+
+.search-btn {
+	cursor: pointer;
+}
+
+.search-form .screen-reader-text {
+	display: none;
+}
+
+.search-form input[type="submit"] {
+	display: block;
+	float: right;
+	height: $base-line-height;
+	width: span(4 of 12);
+	padding: 0;
+	margin: 0;
+}
+
+.search-form input[type="search"] {
+	display: block;
+	float: left;
+	line-height: rhythm(1);
+	height: $base-line-height;
+	width: span(8 of 12);
+	padding: 0 15px;
+	margin: 0;
+}
+
+.header-search {
+	float: left;
+	margin-left: 10px;
+	margin-top: 15px;
+	.search-form input[type="submit"] {
+		display: none;
+	}
+	.search-form input[type="search"] {
+		height: $base-line-height;
+		width: 0;
+		color: #222;
+		background: #333;
+		padding: 0;
+		margin: 0;
+		@include transition-duration(0.5s);
+		@include transition-timing-function(ease-in);
+	}
+	&.open {
+		.search-form input[type="search"]  {
+			color: #fff;
+			width: 150px;
+			padding: 0 15px;
+		}
+	}
+}

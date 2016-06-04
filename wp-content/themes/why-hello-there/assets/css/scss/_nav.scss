@@ -1,0 +1,216 @@
+/* ==========================================================================
+   Primary navigation style (Includes media queries for mobile)
+   ========================================================================== */
+
+#nav {
+	position: relative;
+	width: 100%;
+	z-index: 100;
+	> a {
+		display: none;
+	}
+}
+
+header .menu,
+header .primary-navigation {
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease-in);
+	ul {
+		float: left;
+		margin-bottom: 0;
+		margin-left: 20px;
+	}
+	li {
+		position: relative;
+		float: left;
+		list-style: none;
+		a {
+			display: block;
+			text-transform: uppercase;
+			color: #999;
+			font-weight: normal;
+			font-family: $header-font;
+			padding: 0 0 0 10px;
+			@include adjust-leading-to(2);
+			@include transition-duration(0.2s);
+			@include transition-timing-function(ease-in);
+		}	
+		&:hover > a {
+			color: #fff;
+		}
+	}
+
+	/* Second Level */
+
+	li ul {
+		position: absolute;
+		display: none;
+		left: 0;
+		top: 100%;
+		padding: 0;
+		margin: 0;
+		margin-left: -25px;
+		li {
+			border-bottom: 1px solid #333;
+			a {
+				width: 300px;
+				color: #fff;
+				line-height: rhythm(1.5);
+			 	background: #222;
+				margin: 0;
+				padding: 0 $base-line-height;
+				&:hover {
+					background: $secondary-color;
+				}
+			}
+		}
+	}
+	li:hover {
+		> ul {
+			display: block;
+		}
+	}
+	li ul ul {
+		top: 0;
+		left: 100%;
+		margin-left: 0px;
+	}
+}
+
+.social {
+	float: right;
+	padding-left: 10px;
+	@include adjust-leading-to(2);
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease-in);
+	a {
+		display: block;
+		float: left;
+		color: #999;
+		text-align: center;
+		margin-left: 10px;
+		@include adjust-font-size-to(24px, 2);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in);
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+/* Mobile menu (for screen widths less than 960px) */
+
+@media only screen and ( max-width: 960px ) {
+
+	.social {
+		display: none;
+	}
+
+	/* Compensation for admin bar when logged in on mobile devices */
+	.admin-bar #nav {
+		margin-top: 32px
+	}
+
+  .site-header-inner {
+  	margin-top: 45px;
+  	.site-title {
+  		float: none;
+  		margin: 0 auto;
+  		text-align: center;
+  	}
+  }
+
+	#nav {
+		position: absolute;
+		height: 45px;
+	  top: 0px;
+	  right: 0px;
+	  background: shade($primary-color, 30);
+		> a {
+			position: relative;
+			float: right;
+			font-size: rhythm(1);
+			line-height: rhythm(1.5);
+			height: rhythm(1.5);
+			padding-right: 15px;
+		}
+	  &:not(:target) > a:first-of-type,
+	  &:target > a:last-of-type {
+	    display: inline-block;
+	  }
+	  &:target div > ul {
+	  	display: block;
+	  }
+	}
+	     
+	/* First Level */
+	 
+	header .menu,
+	header .primary-navigation {
+		clear: both;
+		ul {
+			position: absolute;
+			float: none;
+	    display: none;
+	    width: 100%; 
+	    height: auto;
+	    margin-left: 0;
+	    > li {
+		  	float: none;
+			  a {
+			  	line-height: rhythm(1.5);
+					padding: 0 15px;
+			  	margin-left: 0;
+			  	border-top: 1px solid #444;
+			  	border-bottom: 1px solid #222; 
+			  	background: #222;
+			  }
+			  &:hover > a {
+			  	color: $secondary-color;
+			  	background: shade($primary-color, 60);
+			  }
+			}
+	  }
+	 
+	  /* Second Level */
+	 
+	  li ul {
+	    position: relative;
+	    margin-left: 0;
+	    width: 100%; 
+	    z-index: 100;
+	    @include box-shadow(#ffffff 0px 0px);
+	    li {
+	    	border-bottom: 1px solid shade(shade($primary-color, 30), 100);
+    		a {
+    			text-transform: capitalize;
+    			background: shade(shade($primary-color, 30), 100);
+	    		width: 100%;
+	    		&:hover  {
+	    			background: $secondary-color;
+	    		}
+	    	}
+		    &:hover a {
+		    	color: #ffffff;
+		    	background: $secondary-color;
+		    }
+	    }
+	  }
+
+	  /* Third Level +  */
+
+	  li ul ul {
+		top: 0;
+		left: 0;
+		margin-left: 0px;
+	}
+	}  
+}    
+
+/* Compensation for admin bar when logged in on a mobile device */  
+
+@media only screen and ( max-width: 768px ) {
+	.admin-bar #nav {
+		margin-top: 46px
+	}
+}

@@ -1,0 +1,129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Why Hello There\n"
+"POT-Creation-Date: 2014-04-21 23:22-0400\n"
+"PO-Revision-Date: 2014-04-21 23:45-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:6
+msgid "Whoops.  Looks like there's nothing here!"
+msgstr "Whoops.  Looks like there's nothing here!"
+
+#: ../404.php:8
+msgid ""
+"Sorry, nothing was found at this location. I wonder what happened? Anyway, "
+"how about a search?"
+msgstr ""
+"Sorry, nothing was found at this location. I wonder what happened? Anyway, "
+"how about a search?"
+
+#: ../archive.php:11
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Daily Archives: %s"
+
+#: ../archive.php:14
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Monthly Archives: %s"
+
+#: ../archive.php:17
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Yearly Archives: %s"
+
+#: ../archive.php:20
+msgid "Archives"
+msgstr "Archives"
+
+#: ../archive.php:33 ../author.php:22 ../category.php:27 ../index.php:24
+#: ../page.php:24 ../single.php:17 ../tag.php:27
+#: ../page-templates/full-width.php:30
+msgid "No posts were found. Sorry!"
+msgstr "No posts were found. Sorry!"
+
+#: ../author.php:9
+#, php-format
+msgid "All posts by %s"
+msgstr "All posts by %s"
+
+#: ../category.php:9
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Category Archives: %s"
+
+#: ../content-page.php:18 ../content.php:35
+msgid "Continue reading..."
+msgstr "Continue reading..."
+
+#: ../content-page.php:20 ../content.php:37
+msgid "Pages:"
+msgstr "Pages:"
+
+#: ../content-page.php:29 ../content.php:48
+msgid "Edit"
+msgstr "Edit"
+
+#: ../functions.php:49
+msgid "Primary"
+msgstr "Primary"
+
+#: ../functions.php:171
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: ../functions.php:208
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: ../functions.php:208
+msgid "[Edit]"
+msgstr "[Edit]"
+
+#: ../functions.php:217
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#: ../tag.php:9
+#, php-format
+msgid "Tagged in: %s"
+msgstr "Tagged in: %s"
+
+#: ../inc/options-config.php:41
+msgid "Link Color"
+msgstr "Link Color"
+
+#: ../inc/options-config.php:59
+msgid "Enable Front Page Slider"
+msgstr "Enable Front Page Slider"
+
+#: ../inc/options-config.php:74
+msgid "Tag for featuring posts on the slider:"
+msgstr "Tag for featuring posts on the slider:"
+
+#: ../inc/options-config.php:110
+msgid "Facebook page URL:"
+msgstr "Facebook page URL:"
+
+#: ../inc/options-config.php:125
+msgid "Twitter URL:"
+msgstr "Twitter URL:"
+
+#: ../inc/theme-functions.php:35
+msgid "Previous Post"
+msgstr "Previous Post"
+
+#: ../inc/theme-functions.php:38
+msgid "Next Post"
+msgstr "Next Post"

@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Global Reset - resets general styles to maintain consistancy across 
+   browers
+   ========================================================================== */
+
+@include global-reset; // global resest
+
+* {
+	@include box-sizing(border-box);
+}
+
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+
+// establish a baseline using compass
+// the baseline is is used for mainting the vertical rhythm of the theme
+
+$base-font-size : 18px; // default font-size
+$base-line-height : 30px; // baseline
+$hspace : $base-line-height;
+$rhythm-unit : "rem";
+$rem-with-px-fallback: true;
+@include establish-baseline;
+
+// Set colors 
+
+$primary-color : #222222;
+$secondary-color : #d12424;
+$tertiary-color : #d12424;
+
+// Fonts 
+
+$site-title-font : 'Voltaire', sans-serif;
+$header-font : 'Fjalla One', sans-serif;
+$primary-font : 'Bitter', serif;
+
+body {
+	font-family: $primary-font;
+	color: #555;
+  -ms-word-wrap: break-word;
+	word-wrap: break-word;
+	background: #ffffff;
+ //@include debug-vertical-alignment; // uncomment to reveal grid for baseline debugging
+}
+
+/* Typography */
+h1,h2,h3,h4,h5,h6 {
+	color: $primary-color;
+	font-weight: normal;
+	font-family: $header-font;
+	@include margin-trailer(1);
+}
+
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 18px;
+}
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+p {
+	@include margin-trailer(1);
+}
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease-in);
+	&:hover,
+	&:active {
+		color: #444;	
+	}
+}
+
+q,
+blockquote {
+	font-style: italic;
+	border-left: 5px solid #eee;
+	padding-left: $hspace - 5;
+	padding-right: $hspace;
+	@include rhythm(1,0,0,1);
+}
+
+em {
+	font-style: italic;
+}
+
+var,
+strong {
+	font-weight: bold;
+}
+
+/* Tables */
+
+table {
+	background: #f9f9f9;
+	@include margin-trailer(1);
+	thead {
+		font-weight: bold;
+	}
+	tr {
+	}
+	th {
+		font-weight: bold;
+	}
+	th, 
+	td {
+		padding: rhythm(0.5);
+	}
+}
+
+/* Lists */
+
+ul, 
+ol {
+	@include margin-trailer(1);
+	ul, 
+	ol {
+		padding-left: rhythm(1);
+		@include margin-leader(0.5);
+		@include margin-trailer(0.5);
+	}
+}
+
+ul li,
+ol ul li,
+ul ol ul li {
+	list-style: disc;
+	list-style-position: inside;
+}
+
+ol li,
+ul ol li,
+ul ol ol li {
+	list-style: decimal;
+	list-style-position: inside;
+}
+
+dl {
+	@include margin-trailer(1);
+	dt {
+		font-weight: bold;
+	}
+	dd {
+			@include margin-trailer(0.5);
+	}
+}
+
+/* Misc */
+
+cite {
+	font-style: italic;
+}
+
+code, 
+kbd {
+	background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 0 5px;
+}
+
+pre {
+	background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: $base-line-height / 2;
+  margin-bottom: $base-line-height;
+  overflow-x: auto;
+}
+
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+	font-size: 0.8em;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted black;
+}
+
+address {
+	margin: 0 0 $base-line-height $base-line-height;
+}
+
+input,
+textarea {
+	color: #666;
+	font-size: $base-font-size;
+	font-family: $primary-font;
+}
+
+hr {
+	border: none;
+	@include rhythm(1,0,0,1);
+	&:before {
+		content: "";
+		display: block;
+		height: 2px;
+		background: #ddd;
+		margin-top: -2px;
+	}
+}

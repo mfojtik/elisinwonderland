@@ -1,0 +1,422 @@
+/* ==========================================================================
+   Content (Pages & Posts)
+   ========================================================================== */
+
+article {
+	@include margin-trailer(1);
+	&:after {
+		clear: both;
+		display: block;
+		content: "\f069\00a0\f069\00a0\f069\00a0\f069\00a0\f069";
+		color: $secondary-color;
+		font-size: 12px;
+		font-family: FontAwesome;
+		text-align: center;
+		@include rhythm(0, 0.5, 0.5, 0);
+	}
+	&:hover {
+		.content-wrapper {
+			background: #f9f9f9;
+		}
+	}
+}
+
+.single article {
+	&:hover {
+		.content-wrapper {
+			background: none;
+		}
+	}
+}
+
+.author-info {
+	float: left;
+	width: 90px;
+	@include margin-leader(1);
+	.avatar {
+		display: block;
+	}
+	.name {
+		display: block;
+		text-align: center;
+		@include adjust-font-size-to(14px, 1);
+	}
+}
+
+.content-wrapper {
+	margin-left: 240px;
+	overflow: hidden;
+}
+
+.single-post {
+	.content-wrapper {
+		margin-left: 115px;
+	}
+}
+
+/* Entry Images */
+
+.entry-image-thumb {
+	float: left;
+	width: 210px;
+	background: #eee;
+	overflow: hidden;
+	padding: 5px;
+	img {
+		display: block;
+	}
+}
+
+.entry-image {
+	overflow: hidden;
+	img {
+		display: block;
+	}
+}
+
+.place-holder {
+	float: left;
+	width: 210px;
+	height: 210px;
+	background: #eee;
+	overflow: hidden;
+	.fa {
+		display: block;
+		color: #fff;
+		font-size: 64px;
+		text-align: center;
+		line-height: 200px;
+	}
+}
+
+/* Entry Title */
+
+.entry-title {
+	clear: both;
+	font-weight: bold;
+	margin-bottom: 0;
+	@include adjust-font-size-to(30px, 1);
+	&.page {
+		@include margin-trailer(1);
+	}
+	a {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+
+.single-post {
+	.entry-title {
+		@include adjust-font-size-to(45px, 2);
+	}
+}
+
+.sticky {
+	.entry-title:before {
+		content: "\f08d";
+		float: left;
+		display: block;
+		color: $secondary-color;
+		font-family: FontAwesome;
+		padding-right: 5px;
+		}
+}
+
+.type-attachment,
+.format-video,
+.format-image, 
+.format-gallery {
+	.entry-title {
+		@include margin-trailer(0.5);
+	}
+}
+
+/* Entry Categories */
+
+.entry-category {
+	float: left;
+  display: block;
+  font-family: $header-font;
+	text-transform: uppercase;
+	margin-right: 5px;
+	a {
+		color: $secondary-color;
+	}
+}
+
+/* Entry Meta */
+
+.entry-date {
+	float: left;
+	display: block;
+	font-family: $header-font;
+	margin-right: 5px;
+	a {
+		color: #555;
+	}
+}
+
+.entry-comments {
+	float: left;
+	display: block;
+	font-family: $header-font;
+	margin-right: 5px;
+	a {
+		color: #555;
+		&:before {
+			content: "\f075";
+			display: block;
+			float: left;
+			font-family: FontAwesome;
+			padding-right: 5px;
+			@include adjust-font-size-to(12px, 1);
+		}
+	}
+}
+
+/* Entry Content */
+
+.entry-content {
+	clear: both;
+	a {
+		font-weight: bold;
+	}
+}
+
+/* Entry Tags */
+
+.entry-tags {
+	display: block;
+	text-transform: capitalize;
+	@include margin-trailer(1);
+	a {
+		float: left;
+		display: block;
+		font-weight: normal;
+		padding: 0 5px;
+		margin-right: 5px;
+		background: #f9f9f9;
+		font-family: $header-font;
+		&:before {
+			display: block;
+			float: left;
+			content: "\f02b";
+			font-size: 13px;
+			font-family: FontAwesome;
+			padding-right: 5px;
+		}
+		&:hover {
+			color: #fff;
+			background: $secondary-color;
+		}
+	}
+}
+
+/* Post Navigation */
+
+.post-navigation {
+	clear: both;
+	display: block;
+	border-top: 1px solid #ddd;
+	@include margin-trailer(1);
+	a {
+		display: block;
+		padding-left: $hspace;
+		padding-right: $hspace;
+		@include rhythm(0,0.5,0.5,0);
+		&:hover {
+			color: $secondary-color;
+		}
+	}
+	span.next-post-label,
+	span.previous-post-label {
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.previous-post {
+		float: left;
+		text-align: center;
+		width: span(6 of 12);
+		border-right: 1px solid #ddd;
+	}
+	.next-post {
+		float: right;
+		text-align: center;
+		width: span(6 of 12);
+	}	
+}
+
+/* Pages Navigation */
+
+.pages-navigation {
+	text-align: center;
+	@include margin-trailer(1);
+}
+
+.page-numbers {
+	display: inline-block;
+	background: #eee;
+	padding: 0 10px;
+	text-transform: uppercase;
+	&:hover {
+			color: #fff;
+			background: $secondary-color;
+		}
+	&.current {
+		background: #ddd;
+		&:hover {
+			color: #333;
+		}
+	}
+}
+
+/* Paginated Posts & Pages */
+
+.page-links {
+	text-transform: uppercase;
+	@include margin-trailer(1);
+}
+
+/* Edit Link */
+
+.edit-link {
+	position: absolute;
+	top: 0;
+	right: 0;
+	a {
+		display: inline-block;
+		text-transform: uppercase;
+		color: #fff;
+		background: $secondary-color;
+		padding: 0 10px;
+		color: #fff;
+		&:hover {
+			background: $secondary-color;
+		}
+		&:before {
+			display: block;
+			float: left;
+			content: "\f044";
+			font-family: FontAwesome;
+			padding-right: 5px;
+		}
+	}
+}
+
+/* More Link */
+
+.entry-content a.more-link {
+	display: block;
+	color: $secondary-color;
+	font-family: $header-font;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+/* Embedded Tweets */
+
+.twitter-tweet {
+	width: 100%;
+}
+
+/* 404 */
+
+.not-found-title {
+}
+
+/* Post Format Specific */
+
+.format-aside .entry-title,
+.format-link .entry-title,
+.format-quote .entry-title,
+.format-status .entry-title {
+	display: none;
+}
+
+@media only screen and ( max-width: 960px ) {
+
+	.content-wrapper {
+		margin-left: 145px;
+	}
+
+	.single-post {
+		.content-wrapper {
+			margin-left: 115px;
+		}
+	}
+
+	/* Entry Images */
+
+	.entry-image-thumb {
+		width: 120px;
+	}
+
+	.place-holder {
+		width: 120px;
+		height: 120px;
+		.fa {
+			line-height: 120px;
+		}
+	}
+
+	.entry-title {
+		@include adjust-font-size-to(24px, 1);
+	}
+
+	.single-post {
+		.entry-title {
+			@include adjust-font-size-to(30px, 1.5);
+		}
+	}
+}
+
+@media only screen and ( max-width: 420px ) {
+
+	.author-info {
+		float: none;
+		width: 100%;
+		@include margin-leader(0);
+		.avatar {
+			display: block;
+			width: 40px;
+			@include margin-trailer(0.5);
+		}
+		.name {
+			display: none;
+			text-align: left;
+			@include adjust-font-size-to(14px, 1);
+			&:before {
+				content: "by ";
+			}
+		}
+	}
+
+	.content-wrapper {
+		margin-left: 0px;
+	}
+
+	.single-post {
+		.content-wrapper {
+			margin-left: 0px;
+		}
+	}
+
+	/* Entry Images */
+
+	.entry-image-thumb {
+		float: none;
+		width: 100%;
+		@include margin-trailer(1);
+	}
+
+	.place-holder {
+		float: none;
+		width: 100%;
+		height: 100px;
+		@include margin-trailer(1);
+		.fa {
+			line-height: 100px;
+		}
+	}
+}
+
