@@ -1,7 +1,7 @@
 <?php if (!defined( 'ABSPATH' )) exit; ?>
 <form method="POST" action="<?php echo admin_url();?>admin-post.php" id="add-form">
 <input type="hidden" name="action" value="save_button">
-<input type="hidden"  class="select-button" name="button" value="">		
+<input type="hidden"  class="select-button" name="button" value="">
 <input type="hidden" class="button-primary" value="<?php echo esc_attr(@$_GET['id']); ?>" name="hidden_button_id" />
 <?php wp_nonce_field('save_button', 'wp-nonce-token'); ?>
 <div class="sgmb-container">
@@ -9,7 +9,7 @@
 		<div id="default-message" class="updated notice notice-success is-dismissible " ><p>Changes were saved</p></div>
 	<?php endif; ?>
 	<div class="create-title">
-		<div > 
+		<div >
 			<h1 class="title-crud"> Create new social buttons </h1>
 		</div>
 		<div class="save-button">
@@ -38,7 +38,7 @@
 			<?php if($data): ?>
 			<div class="conteiner-shortcode-inside-livePreview">
 				<span class="shortcode-title-inside-livePreview">Shortcode: </span>
-				<span class="sgmb-shortcode">[sgmb id=<?php echo esc_attr(@$data['id']); ?>] </span> 
+				<span class="sgmb-shortcode">[sgmb id=<?php echo esc_attr(@$data['id']); ?>] </span>
 			</div>
 			<?php endif;?>
 			<div class="dropdownWrapper dropdownWrapper<?php echo esc_attr(@$data['id']); ?> dropdownWrapper-for-livePreview ">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<?php global $SGMB_BUTTON_FONT_SIZE, $SGMB_WIDGET_THEMES, $SGMB_SOCIAL_BUTTONS, $SGMB_WIDGET_EFFECTS, $SGMB_ADVANCED_NAME_SOCIAL_BUTTONS, $SGMB_FONT_SIZE_FOR_SHARE_LIST; ?>
 		<div class="sgmb-tabs" id="sgmb-tabs">
 			<div id="tabs">
@@ -60,7 +60,7 @@
 				<div id="tabs-1">
 					<div class="ui-widget ui-helper-clearfix">
 						<div  class="ui-widget-content buttons-content">
-							<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix"> 
+							<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
 								<?php foreach ($SGMB_SOCIAL_BUTTONS as $value): ?>
 								<li id="<?php echo esc_attr($value); ?>" data-social-button="<?php echo esc_attr($value); ?>" class="ui-widget-content ui-corner-tr js-social-btn js-social-btn-status">
 									<?php if(SGMB_PRO != 1): ?>
@@ -72,9 +72,9 @@
 									<?php else: ?>
 										<img src="<?php echo SGMB_URL."/img/$value.png"; ?>" class="img-for-drag">
 									<?php endif; ?>
-								</li> 
+								</li>
 								<?php endforeach; ?>
-							</ul> 
+							</ul>
 						</div>
 						<div>
 							<span class="label-dragOverToAdd">Drag over to add</span>
@@ -87,7 +87,7 @@
 						<h4>Share the following url:</h4>
 						<input type="radio" name="currentUrl" value="1" <?php if( @$data['options']['currentUrl'] != '0' ): ?> checked  <?php endif; ?> >Current url<br>
 						<input type="radio"   value="0" name="currentUrl" <?php if(@$data['options']['currentUrl'] == '0'): ?> checked  <?php endif; ?> >
-						<span class="sgmb-label-url">Url:</span> 
+						<span class="sgmb-label-url">Url:</span>
 						<input id="inputUrl" name="url" class="js-url-input" type="text" value="<?php echo @$data['options']['url'] ?>">
 						<div class="div-share-text">
 							<span class="sgmb-label-share-text">Your share text:</span>
@@ -99,9 +99,9 @@
 							<h3 class="<?php echo esc_attr($value); ?>"><?php echo $SGMB_ADVANCED_NAME_SOCIAL_BUTTONS[$value] ?></h3>
 							<div class="<?php echo esc_attr($value); ?>">
 								<p>
-								<?php 
+								<?php
 									$sgmbAddNewSection = new SgmbAddNewSection();
-									$sgmbAddNewSection->renderOptions($value); 
+									$sgmbAddNewSection->renderOptions($value);
 								?>
 								</p>
 							</div>
@@ -118,13 +118,13 @@
 						<span class="sgmb-label-checkbox">Use round buttons:</span>
 						<input type="checkbox" name="roundButton" id="checkbox-round-buttons"
 						<?php if(@$data['options']['roundButton'] == 'on'): ?>
-						checked 
+						checked
 					 	<?php endif; ?>>
 					</div>
 					<div class="sgmb-checkbox">
 						<span class="sgmb-label-checkbox">Show labels:</span>
 						<?php $checked = "checked";?>
-						<?php 	
+						<?php
 							if(isset($data['options']['showLabels']) && $data['options']['showLabels'] == '') {
 					 			$checked = "";
 							}
@@ -135,23 +135,23 @@
 						<span class="sgmb-label-checkbox">Show counts:</span>
 						<input type="checkbox" name="showCounts" id="checkbox-show-counts"
 						<?php if(@$data['options']['showCounts'] == 'on'): ?>
-							checked 
+							checked
 					 	<?php endif; ?>>
 					</div>
 					<div class="sgmb-checkbox">
 						<span class="sgmb-label-checkbox">Center Buttons:</span>
 						<input type="checkbox" name="showCenter" id="checkbox-show-counts"
 						<?php if(@$data['options']['showCenter'] == 'on'): ?>
-							checked 
+							checked
 						<?php endif; ?>>
 					</div>
 					<div class="sgmb-checkbox">
 						<span class="sgmb-label-checkbox">Space between buttons:</span>
-						<input class="sgmb-betweenButtons"  type='text' name="betweenButtons" 
+						<input class="sgmb-betweenButtons"  type='text' name="betweenButtons"
 							<?php if( @$data['options']['betweenButtons'] == ''): ?>
-								value="1px" 
+								value="1px"
 							<?php else: ?>
-								value="<?php echo esc_attr(@$data['options']['betweenButtons']); ?>" 
+								value="<?php echo esc_attr(@$data['options']['betweenButtons']); ?>"
 							<?php endif;?>
 						>
 					</div>
@@ -159,7 +159,7 @@
 						<span class="sgmb-label-checkbox">Toggle dropdown to show buttons:</span>
 						<input type="checkbox" name="showButtonsAsList" id="checkbox-show-widget-in-dropdown"
 						<?php if(@$data['options']['showButtonsAsList'] == 'on'): ?>
-						checked 
+						checked
 					 	<?php endif; ?>>
 					</div>
 					<div class="sgmb-dropdown-color sgmb-dropdown-advance-options">
@@ -194,47 +194,57 @@
 					<div class="sgmb-checkbox">
 						<span class="sgmb-label-checkbox">Show social media on every post:</span>
 						<?php if(@$data['id'] != get_option( 'SGMB_SHARE_BUTTON_ID' )) { @$data['options']['showButtonsOnEveryPost'] = ''; } ?>
-						<input type="checkbox" name="showButtonsOnEveryPost" 
+						<input type="checkbox" name="showButtonsOnEveryPost"
 						<?php if(@$data['options']['showButtonsOnEveryPost'] == 'on'): ?>
-							checked 
+							checked
 					 	<?php endif; ?>>
 					</div>
 					<div class="showEveryPostOptions">
+						<div class="sgmb-checkbox">
+							<span class="sgmb-label-checkbox">Show buttons before post contents:</span>
+							<input type="checkbox" name="showButtonsBeforePostContents"
+							<?php if(SGMB_PRO != 1): ?>
+								disabled>
+								<a href="<?php echo SGMB_PRO_URL; ?>" class="sgmb-pro-label-for-visual" target="_blanck">PRO</a>
+							<?php else: ?>
+								>
+							<?php endif; ?>
+						</div>
 						<div class="sgmb-checkbox">
 							<span class="sgmb-label-checkbox">Text before the sharing buttons:</span>
 							<input class="sgmb-textOnEveryPost"  type='text' name="textOnEveryPost" value="<?php echo esc_attr(@$data['options']['textOnEveryPost']); ?>" >
 						</div>
 						<div class="sgmb-selctor-position-every-post">
 							<span class="sgmb-label-checkbox">Social media position:</span>
-							<?php $sgmbPostionOnEveryPost = 'sgmbPostionOnEveryPost'; $sgmbPostion = array('Left', 'Center', 'Right'); 
+							<?php $sgmbPostionOnEveryPost = 'sgmbPostionOnEveryPost'; $sgmbPostion = array('Left', 'Center', 'Right');
 								echo SgmbAddNewSection::createSelect($sgmbPostionOnEveryPost, $sgmbPostion, @$data, $sgmbPostionOnEveryPost); ?>
 						</div>
 						<div class="sgmb-checkbox">
 							<span class="sgmb-label-checkbox">Show on all posts:</span>
 							<?php if(@$data['id'] != get_option( 'SGMB_SHARE_BUTTON_ID' )) { @$data['options']['showOnAllPost'] = ''; } ?>
-							<input type="checkbox" name="showOnAllPost" 
+							<input type="checkbox" name="showOnAllPost"
 							<?php if(@$data['options']['showOnAllPost'] == 'on'): ?>
-								checked 
+								checked
 							<?php endif; ?>>
 						</div>
-						<div class="sgmb-selctor-position-every-post sgmb-select-posts"> 
+						<div class="sgmb-selctor-position-every-post sgmb-select-posts">
 							<span class="sgmb-label-checkbox">Select Posts:</span>
-							<?php 
+							<?php
 								$args = array('posts_per_page' => -1); // Set to -1 to remove the limit, default 5
 								$posts = get_posts($args);
 								foreach ($posts as $post) {
 									$postTitle[] = $post->post_title;
 								}
-								echo SgmbAddNewSection::createSelect('sgmbSelectedPosts[]', $postTitle, @$data, 'sgmbSelectedPosts');	
+								echo SgmbAddNewSection::createSelect('sgmbSelectedPosts[]', $postTitle, @$data, 'sgmbSelectedPosts');
 							?>
 						</div>
 					</div>
 					<div class="sgmb-checkbox">
 						<span class="sgmb-label-checkbox">Show social media on custom post:</span>
 						<?php if(@$data['id'] != get_option('SGMB_SHARE_BUTTON_ID')) { @$data['options']['showButtonsOnEveryPost'] = ''; } ?>
-						<input type="checkbox" name="showButtonsOnCustomPost" 
+						<input type="checkbox" name="showButtonsOnCustomPost"
 						<?php if(@$data['options']['showButtonsOnCustomPost'] == 'on'): ?>
-							checked 
+							checked
 						<?php endif; ?>
 						<?php if(SGMB_PRO != 1): ?>
 							disabled>
@@ -247,7 +257,7 @@
 						<div>
 							<span class="sgmb-label-checkbox">Floating buttons:</span>
 							<?php if(@$data['options']['showButtonsOnEveryPost'] == 'on') { @$data['options']['setButtonsPosition'] = ''; } ?>
-							<input type="checkbox" name="setButtonsPosition" 
+							<input type="checkbox" name="setButtonsPosition"
 							<?php if(@$data['options']['setButtonsPosition'] == 'on'): ?>
 								checked
 						 	<?php endif; ?>
@@ -262,7 +272,7 @@
 					<div class="show-mobile-direct">
 						<div>
 							<span class="sgmb-label-checkbox">Show on mobile:</span>
-							<input type="checkbox" name="showButtonsOnMobileDirect" 
+							<input type="checkbox" name="showButtonsOnMobileDirect"
 							<?php  if(@$data['options']['showButtonsOnMobileDirect'] == 'on' || @$data['id'] == null): ?>
 								checked
 						 	<?php endif; ?>
@@ -281,17 +291,17 @@
 						<?php foreach ($SGMB_WIDGET_THEMES as $theme => $sgmbIsPro): ?>
 							<div>
 								<div class = "theme-selector">
-									<input  id="<?php echo "theme-"."$theme"."-radio" ?>" type="radio" value="<?php echo esc_attr($theme); ?>" name="theme" 
+									<input  id="<?php echo "theme-"."$theme"."-radio" ?>" type="radio" value="<?php echo esc_attr($theme); ?>" name="theme"
 									<?php if(empty($data['options']['theme']) && $theme =='classic'): ?>
 										checked
 									<?php endif; ?>
-									<?php if( @$data['options']['theme'] ==  $theme ): ?> 
-										checked  
+									<?php if( @$data['options']['theme'] ==  $theme ): ?>
+										checked
 									<?php endif; ?>
 									<?php if($sgmbIsPro == 1 && SGMB_PRO != 1): ?>
 										disabled
 									<?php endif;?>>
-								</div> 
+								</div>
 								<div class= "theme-selector">
 									<?php foreach ($SGMB_SOCIAL_BUTTONS as $value): ?>
 										<?php if($value != 'fbLike' && $value != 'twitterFollow'): ?>
@@ -328,7 +338,7 @@
 			</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 </form>
 <script>
@@ -342,6 +352,6 @@ jQuery(document).ready(function($){
 	var lp = sgmb.getLivePreview();
 	lp.setWidget(widget);
 	widget.show(data, 1, '1');
-});	
+});
 SGMB_URL = "<?php echo esc_url(SGMB_URL); ?>";
 </script>

@@ -4,7 +4,7 @@ Contributors: Social Media By Sygnoos, Support by Sygnoos
 Donate link: https://sygnoos.com/
 Tags: social, social follow, social following, social links, social media, social media buttons, social media icons, social media widget, social share, social sharing, social widget, social media, floating buttons, facebook, twitter, social bar, linkedin, pinterest, AddThis
 Requires at least: 3.8
-Tested up to: 4.5.2
+Tested up to: 4.5.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -107,6 +107,18 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Changelog ==
 
+= 1.2.5 =
+* Stability improvements
+
+= 1.2.4 =
+* Hot-fix
+
+= 1.2.3 =
+* Added featured plugins section
+
+= 1.2.2 =
+* Font bug fixed.
+
 = 1.2.1 =
 * CSS bug fixed.
 
@@ -123,10 +135,10 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 * New option: Availability to define share text.
 
 = 1.1.6 =
-* New option: Align social buttons to center
+* New option: Align social buttons to center.
 
 = 1.1.5 =
-* Javascript bug fixed
+* Javascript bug fixed.
 
 = 1.1.4 =
 * Code cleenup.
@@ -180,4 +192,4 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Upgrade Notice ==
 
-Current version of Social Media is 1.1.9
+Current version of Social Media is 1.2.4

@@ -45,7 +45,7 @@ class SGMB
 					$content .= @$textBeforeSocialMedia;
 					$content .= do_shortcode( "[sgmb id=$id]" );
 					$content .= "</div>";
-					$content .= '<script> jQuery(".socialMediaOnEveryPost").addClass("'.$sgmbPosition.'") </script>';					
+					$content .= '<script> jQuery(".socialMediaOnEveryPost").addClass("'.$sgmbPosition.'") </script>';
 				}
 				else {
 					foreach ($postsTitleInData as  $postTitleInData) {
@@ -57,7 +57,7 @@ class SGMB
 							$content .= '<script> jQuery(".socialMediaOnEveryPost").addClass("'.$sgmbPosition.'") </script>';
 						}
 					}
-				}				
+				}
 			}
 		}
 		return $content;
@@ -163,22 +163,30 @@ class SGMB
 
 	public function addMenu()
 	{
-		add_menu_page("button", "Social Media", "manage_options", "socialmediabuilder", array( $this, 'showAllButtons' ), "dashicons-share");
-		add_submenu_page("socialmediabuilder", "All Buttons", "All Buttons", 'manage_options', "socialmediabuilder", array( $this, 'showAllButtons' ));
-		add_submenu_page("socialmediabuilder", "Add New", "Add New", 'manage_options', "create-button", array( $this, 'createButtons' ));
+		add_menu_page("button", "Social Media", "manage_options", "socialmediabuilder", array($this, 'showAllButtons'), "dashicons-share");
+		add_submenu_page("socialmediabuilder", "All Buttons", "All Buttons", 'manage_options', "socialmediabuilder", array($this, 'showAllButtons'));
+		add_submenu_page("socialmediabuilder", "Add New", "Add New", 'manage_options', "create-button", array($this, 'createButtons'));
+		add_submenu_page("socialmediabuilder", "More plugins", "More plugins", 'manage_options', "show-more-plugins", array($this, 'showMorePlugins'));
 	}
 
 	public function showAllButtons()
 	{
-		require_once( SGMB_CLASSES .'pages/SgmbAllButtonsSection.php');
+		require_once(SGMB_CLASSES .'pages/SgmbAllButtonsSection.php');
 		$sgmb = new SgmbAllButtonsSection();
 		$sgmb->init();
 	}
 
 	public function createButtons()
 	{
-		require_once( SGMB_CLASSES .'pages/SgmbAddNewSection.php');
+		require_once(SGMB_CLASSES .'pages/SgmbAddNewSection.php');
 		$sgmb = new SgmbAddNewSection();
+		$sgmb->init();
+	}
+
+	public function showMorePlugins()
+	{
+		require_once(SGMB_CLASSES .'pages/SgmbShowMorePlugins.php');
+		$sgmb = new SgmbShowMorePlugins();
 		$sgmb->init();
 	}
 
