@@ -3,7 +3,7 @@
 * Plugin Name: Social
 * Plugin URI:  https://sygnoos.com
 * Description: Social media buttons.
-* Version:     1.2.1
+* Version:     1.2.5
 * Author:      Sygnoos
 * Author URI:  https://www.sygnoos.com
 */
