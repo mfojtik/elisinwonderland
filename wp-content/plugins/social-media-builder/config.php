@@ -7,11 +7,11 @@ define('SGMB_FILES', SGMB_PATH.'files/');
 define('SGMB_CLASSES', SGMB_PATH.'classes/');
 define('SGMB_LIBRARY', SGMB_PATH.'library/');
 define('SGMB_TABLE_LIMIT', 15);
-define('SGMB_SHARE_BUTTON_VERSION', 1.25);
+define('SGMB_SHARE_BUTTON_VERSION', 1.29);
 define('SGMB_DEFAULT_SHARE_URL', "http://google.com");
 define('SGMB_DEFAULT_THEME', "classic");
 define('SGMB_PRO', 0); //  0 -> free, 1 -> pro
-define('SGMB_PRO_URL', 'https://sygnoos.com/wordpress-social-media');
+define('SGMB_PRO_URL', 'http://plugins.sygnoos.com/wordpress-social-buttons/');
 
 global $SGMB_BUTTON_FONT_SIZE;
 global $SGMB_WIDGET_THEMES;

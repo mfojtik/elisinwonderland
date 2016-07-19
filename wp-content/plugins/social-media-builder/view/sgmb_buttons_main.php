@@ -21,7 +21,7 @@
 	<?php endif; ?>
 	<h1 class="h1-for-headers-wrapper">Social Buttons <a href="<?php echo admin_url();?>admin.php?page=create-button" class="add-new-h2">Add New</a>
 		<?php if(SGMB_PRO != 1): ?>
-			<input type="button" class="sgmbUpgrateProButton" value="Upgrade to PRO version" onclick="window.open('https://sygnoos.com/wordpress-social-media/')">
+			<input type="button" class="sgmbUpgrateProButton" value="Upgrade to PRO version" onclick="window.open('http://plugins.sygnoos.com/wordpress-social-buttons/')">
 		<?php endif; ?>
 	</h1>
 </div>

@@ -1,4 +1,4 @@
-=== Social ===
+ === Social ===
 Plugin Name: Social
 Contributors: Social Media By Sygnoos, Support by Sygnoos
 Donate link: https://sygnoos.com/
@@ -22,7 +22,7 @@ You know what's the not-so-good aspect of blogging? It can be tedious and will c
 
 https://www.youtube.com/watch?v=oCZzQ85Gnn4
 
-<a href="https://sygnoos.com/wordpress-social-media/" target="_blank">Get Social Media PRO package</a>
+<a href="http://plugins.sygnoos.com/wordpress-social-buttons/" target="_blank">Get Social Media PRO package</a>
 
 From simple to fancy but useful, yes, you can transform your website. This plugin will allow you to add social share buttons to your posts. What sets the Social Media Builder aside from the numerous social sharing WordPress plugins is its capability to support the relevant social media platforms that people commonly use. Talking about limitations, well, sky is the limit here as you can add the following social media providers with ease:
 
@@ -71,8 +71,10 @@ Its user-friendly interface will allow even those 'non-techie' individuals to us
 * 11 Social Button Icons
 * 16 Themes
 * Insert Social Buttons on custom posts
+* Insert Socail Buttons on every page
+* Show Social buttons inside a popup
 
-<a href="https://sygnoos.com/wordpress-social-media/" target="_blank">Get Social Media PRO package</a>
+<a href="http://plugins.sygnoos.com/wordpress-social-buttons/" target="_blank">Get Social Media PRO package</a>
 
 With our Social Media plugin you can also make the icon with background and  without background, you can make group icons if you want several social media icons to be added, group icons with share count,  you can do an individual and group sizing  of icons. This is a really great opportunity to make all the design of the buttons as you wish. All the details can be the way you want them to be, if you use our Social Media plugin!
 
@@ -107,14 +109,26 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Changelog ==
 
+= 1.2.9 =
+* PHP notice was fixed inside Widget section.
+
+= 1.2.8 =
+* Code Cleanup.
+
+= 1.2.7 =
+* Bug fixes.
+
+= 1.2.6 =
+* Post sharing improvements.
+
 = 1.2.5 =
-* Stability improvements
+* Stability improvements.
 
 = 1.2.4 =
-* Hot-fix
+* Hot-fix.
 
 = 1.2.3 =
-* Added featured plugins section
+* Added featured plugins section.
 
 = 1.2.2 =
 * Font bug fixed.
@@ -192,4 +206,4 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Upgrade Notice ==
 
-Current version of Social Media is 1.2.4
+Current version of Social Media is 1.2.9

@@ -50,4 +50,16 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="plugin-card" onclick="window.open('http://wpkicker.com/')">
+		 <div class="plugin-card-top">
+			 <a href="#" class="plugin-icon"><style type="text/css">#plugin-icon-kicker { width:128px; height:128px; background-size:128px 128px; }</style><div class="plugin-icon" style="float:left; margin: 3px 6px 6px 0px;"><img id="plugin-icon-kicker" src='<?php echo SGMB_URL."/img/blog-wp-kicker.png";?>'></div></a>
+			 <div class="name column-name">
+				 <h4><a href="#">WP Kicker</a></h4>
+			 </div>
+			<div class="desc column-description">
+				<p>Wp Kicker has  a definite mission, to provide WordPress users with all the necessary information they may be needing concerning the security, the aim or the instructions of usage of WordPress in general.</p>
+			</div>
+		</div>
+	</div>
 </div>

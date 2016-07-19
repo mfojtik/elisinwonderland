@@ -51,11 +51,7 @@ class SGMBButton
 		$buttons = array();
 		$selectedPosts = array();
 		
-		if(isset($_POST['sgmbSelectedPosts'])) {
-			foreach (@$_POST['sgmbSelectedPosts'] as  $post) {
-				$selectedPosts[] = sanitize_text_field($post);
-			}
-		}
+		$sgmbSelectedPosts = explode(",", $this->sanitize('sgmb-all-selected-post'));
 		
 		$button = explode(',',sanitize_text_field($_POST['button']));
 		foreach ($button as $value) {
@@ -121,7 +117,7 @@ class SGMBButton
 			'sgmbPostionOnEveryPost' => $this->sanitize('sgmbPostionOnEveryPost'),
 			'textOnEveryPost' => $this->sanitize('textOnEveryPost'),
 			'showButtonsOnMobileDirect' => $this->sanitize('showButtonsOnMobileDirect'),
-			'sgmbSelectedPosts' => $selectedPosts
+			'sgmbSelectedPosts' => $sgmbSelectedPosts
 		);
 
 		$id = $this->sanitize('hidden_button_id');
