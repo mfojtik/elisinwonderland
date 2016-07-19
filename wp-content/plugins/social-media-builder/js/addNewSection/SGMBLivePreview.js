@@ -18,6 +18,18 @@ SGMBLivePreview.prototype.setWidget = function(wdg)
 	this.widget = wdg;
 }
 
+SGMBLivePreview.prototype.addSelectboxValuesIntoInput = function() {
+	
+	var selectedPosts = [];
+	jQuery("#add-form").submit(function(e) {
+		var posts = jQuery("select[data-selectbox='sgmbSelectedPosts'] > option:selected");	
+		for(i=0; i<posts.length; i++) {
+			selectedPosts.push(posts[i].value);
+		}
+		jQuery(".sgmb-all-selected-post").val(selectedPosts);
+	});
+}
+
 SGMBLivePreview.prototype.init = function()
 {
 	var that = this;
@@ -29,6 +41,7 @@ SGMBLivePreview.prototype.init = function()
 	this.roundButton = jQuery('[name = roundButton]');
 	this.showLabels = jQuery('[name = showLabels]');
 	this.betweenSize = jQuery('.sgmb-betweenButtons').val();
+	this.addSelectboxValuesIntoInput();
 
 	jQuery(".js-social-btn-text").bind('input', function() {
 		var btnText = jQuery(this).val();

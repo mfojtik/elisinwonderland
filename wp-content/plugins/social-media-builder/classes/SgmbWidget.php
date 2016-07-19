@@ -5,14 +5,8 @@ class SgmbWidget extends WP_Widget
 	function __construct()
 	{
 		parent::__construct(
-
-			// Base ID of your widget
 			'SgmbWidget',
-
-			// Widget name will appear in UI
 			__('Social Media Builder', 'sgmb_widget_domain'),
-
-			// Widget description
 			array('description' => __( 'Most important social buttons for your site', 'sgmb_widget_domain' ),)
 		);
 	}
@@ -24,11 +18,12 @@ class SgmbWidget extends WP_Widget
 		if($postImage == false) {
 			$postImage = $this->getPostImage();
 		}
+		$postUrl = get_permalink();
  		$data = array();
 		$data = $this->getData($instance['id']);
 		if(!empty($data)) {
 			$html = $this->prepareWidget($data);
-			$html .= $this->showWidget(json_encode($data), self::$widgetCounter, $postImage);
+			$html .= $this->showWidget(json_encode($data), self::$widgetCounter, $postImage, $postUrl);
 			echo  $html;
 		}
 	}
@@ -79,10 +74,11 @@ class SgmbWidget extends WP_Widget
 		if($postImage == false) {
 			$postImage = $this->getPostImage();
 		}
+		$postUrl = get_permalink();
 		$data = $this->getData($args['id']);
 		if(!empty($data)) {
 			$html = $this->prepareWidget($data);
-			$html .=  $this->showWidget(json_encode($data), self::$widgetCounter, $postImage);
+			$html .=  $this->showWidget(json_encode($data), self::$widgetCounter, $postImage, $postUrl);
 			return $html;
 		}
 	}
@@ -95,13 +91,13 @@ class SgmbWidget extends WP_Widget
 		if(isset($matches[1][0])){
 			$first_img = $matches[1][0];
 		}
-		
+
 		if(empty($first_img)) {
 			$first_img = SGMB_URL.'/img/no-image.png';
 		}
 		return $first_img;
 	}
-	
+
 	public function form( $instance )
 	{
 		$data = SGMBButton::getDataList();
@@ -160,12 +156,12 @@ class SgmbWidget extends WP_Widget
 		wp_enqueue_style('sgmb_drop_down_style');
 	}
 
-	public  function showWidget($data, $widgetCounter, $postImage)
+	public  function showWidget($data, $widgetCounter, $postImage, $postUrl)
 	{
 		$content = "<script type=\"text/javascript\">
 		jQuery(document).ready(function($){";
 		$content .= "var widget = new SGMBWidget();";
-		$content .= "widget.show($data, $widgetCounter, '', '$postImage');";
+		$content .= "widget.show($data, $widgetCounter, '', '$postImage', '$postUrl');";
 		$content .= " });</script>";
 		echo $content;
 	}

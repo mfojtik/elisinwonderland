@@ -1,3 +1,8 @@
+.sgmb-show-in-popup
+{
+	margin-top: 20px;
+}
+
 #sgmb-plugins-wrapper 
 {
 	width: 90%;
@@ -9,6 +14,11 @@
 {
 	top: 0px !important;
 	left: 10px !important;
+}
+
+.plugin-card  
+{
+	min-height:200px !important;	
 }
 
 .plugin-card .desc  

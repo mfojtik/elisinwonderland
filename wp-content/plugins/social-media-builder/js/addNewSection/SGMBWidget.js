@@ -23,17 +23,20 @@ function SGMBWidget() {
 	this.twitterFollowSize = 'defualt';
 	this.followUserName = 'Sygnoos';
 	var that = this;
-
-
 }
 
-SGMBWidget.prototype.setShareUrl = function(shareUrl) {
+SGMBWidget.prototype.setShareUrl = function(shareUrl, postUrl) 
+{ 
 	if (shareUrl != '') {
 		this.options.url = shareUrl;
 	}
+	else if (postUrl != '') {
+		this.options.url = postUrl;
+	}
 }
 
-SGMBWidget.prototype.show = function(data, widgetCounter, hide, postImage)
+
+SGMBWidget.prototype.show = function(data, widgetCounter, hide, postImage, postUrl)
 {
 	if(data.options.shareText != '') {
 		this.shareText = data.options.shareText;
@@ -69,7 +72,7 @@ SGMBWidget.prototype.show = function(data, widgetCounter, hide, postImage)
 		}
 		if(obj) {
 			this.changeButtonSize(data.options.fontSize);
-			this.setShareUrl(data.options.url);
+			this.setShareUrl(data.options.url, postUrl);
 			this.changePanelEffect(data.options.buttonsPanelEffect);
 		}
 	}

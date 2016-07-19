@@ -1,9 +1,9 @@
 <?php
 /**
 * Plugin Name: Social
-* Plugin URI:  https://sygnoos.com
-* Description: Social media buttons.
-* Version:     1.2.5
+* Plugin URI:  http://plugins.sygnoos.com/wordpress-social-buttons/
+* Description: Social media share buttons.
+* Version:     1.2.9
 * Author:      Sygnoos
 * Author URI:  https://www.sygnoos.com
 */
