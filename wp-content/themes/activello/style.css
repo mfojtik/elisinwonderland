@@ -928,6 +928,7 @@ input[type=submit] {
 #logo {
   padding: 50px 0 45px 0;
   text-align: center;
+  display: none;
 }
 #line {
   border-bottom: 1px solid #ddd;
@@ -1057,7 +1058,7 @@ letter-spacing: 1px;
   display: inline-block;
 }
 .navbar-brand {
-    display: inline-block;
+    display: none;
     float: none;
     color: #DADADA;
     font-size: 30px;
