@@ -2,7 +2,7 @@
 Plugin Name: Social
 Contributors: Social Media By Sygnoos, Support by Sygnoos
 Donate link: https://sygnoos.com/
-Tags: social, social follow, social following, social links, social media, social media buttons, social media icons, social media widget, social share, social sharing, social widget, social media, floating buttons, facebook, twitter, social bar, linkedin, pinterest, AddThis
+Tags: social, social follow, social following, social links, social media, social media buttons, social media icons, social media widget, social share, social sharing, social widget, social media, floating buttons, facebook, twitter, social bar, anlytics, linkedin, pinterest, AddThis
 Requires at least: 3.8
 Tested up to: 4.5.3
 Stable tag: trunk
@@ -73,6 +73,9 @@ Its user-friendly interface will allow even those 'non-techie' individuals to us
 * Insert Social Buttons on custom posts
 * Insert Socail Buttons on every page
 * Show Social buttons inside a popup
+* Exit-Intent popup
+* Show popup after amount of time
+* Google Analytics
 
 <a href="http://plugins.sygnoos.com/wordpress-social-buttons/" target="_blank">Get Social Media PRO package</a>
 
@@ -108,6 +111,10 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 4.  Social Buttons visual screen
 
 == Changelog ==
+
+= 1.3.0 =
+* Added clone functionlity
+* UI changes
 
 = 1.2.9 =
 * PHP notice was fixed inside Widget section.
@@ -206,4 +213,4 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Upgrade Notice ==
 
-Current version of Social Media is 1.2.9
+Current version of Social Media is 1.3.0

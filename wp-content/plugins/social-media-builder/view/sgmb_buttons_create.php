@@ -56,6 +56,7 @@
 					<li><a href="#tabs-2">Visual</a></li>
 					<li><a href="#tabs-3">Themes</a></li>
 					<li><a href="#tabs-4">Effects</a></li>
+					<li><a href="#tabs-5">Google Analitics <span class="pro-label-analytics-title">*Pro</span></a></li>
 				</ul>
 				<div id="tabs-1">
 					<div class="ui-widget ui-helper-clearfix">
@@ -230,7 +231,7 @@
 						<div class="sgmb-selctor-position-every-post sgmb-select-posts">
 							<span class="sgmb-label-checkbox">Select Posts:</span>
 							<input type="hidden" class="sgmb-all-selected-post" name="sgmb-all-selected-post" value="">
-							<?php 
+							<?php
 								$classes = 'selectOption';
 								$args = array('posts_per_page' => -1); // Set to -1 to remove the limit, default 5
 								$posts = get_posts($args);
@@ -241,77 +242,11 @@
 							?>
 						</div>
 					</div>
-					<div class="sgmb-checkbox">
-						<span class="sgmb-label-checkbox">Show social media on custom post:</span>
-						<?php if(@$data['id'] != get_option('SGMB_SHARE_BUTTON_ID')) { @$data['options']['showButtonsOnEveryPost'] = ''; } ?>
-						<input type="checkbox" name="showButtonsOnCustomPost"
-						<?php if(@$data['options']['showButtonsOnCustomPost'] == 'on'): ?>
-							checked
-						<?php endif; ?>
-						<?php if(SGMB_PRO != 1): ?>
-							disabled>
-							<a href="<?php echo SGMB_PRO_URL; ?>" target="_blank" class="sgmb-pro-label-for-visual" target="_blanck">PRO</a>
-						<?php else: ?>
-							>
-						<?php endif; ?>
+					<div class="sgmb-pro-wrapper">
+						<a href="<?php echo SGMB_PRO_URL; ?>" target="_blank" class="sgmb-pro-label">Upgrade Pro Now</a>
+						<small class="sgmb-pro-notice">* In the picture bellow is shown what you'll get in Pro</small>
 					</div>
-					<div class="sgmb-checkbox">
-						<span class="sgmb-label-checkbox">Show social media on every page:</span>
-						<?php if(@$data['id'] != get_option('SGMB_SHARE_BUTTON_ID')) { @$data['options']['showButtonsOnEveryPost'] = ''; } ?>
-						<input type="checkbox" name="showButtonsOnCustomPost"
-						
-						<?php if(SGMB_PRO != 1): ?>
-							disabled>
-							<a href="<?php echo SGMB_PRO_URL; ?>" target="_blank" class="sgmb-pro-label-for-visual" target="_blanck">PRO</a>
-						<?php else: ?>
-							>
-						<?php endif; ?>
-					</div>
-					<div class='sgmb-buttons-position-div'>
-						<div>
-							<span class="sgmb-label-checkbox">Floating buttons:</span>
-							<?php if(@$data['options']['showButtonsOnEveryPost'] == 'on') { @$data['options']['setButtonsPosition'] = ''; } ?>
-							<input type="checkbox" name="setButtonsPosition"
-							<?php if(@$data['options']['setButtonsPosition'] == 'on'): ?>
-								checked
-						 	<?php endif; ?>
-							<?php if(SGMB_PRO != 1): ?>
-								disabled>
-								<a href="<?php echo SGMB_PRO_URL; ?>" target="_blank" class="sgmb-pro-label-for-visual">PRO</a>
-							<?php else: ?>
-								>
-							<?php endif; ?>
- 						</div>
-					</div>
-					<div class="show-mobile-direct">
-						<div>
-							<span class="sgmb-label-checkbox">Show on mobile:</span>
-							<input type="checkbox" name="showButtonsOnMobileDirect"
-							<?php  if(@$data['options']['showButtonsOnMobileDirect'] == 'on' || @$data['id'] == null): ?>
-								checked
-						 	<?php endif; ?>
-							<?php if(SGMB_PRO != 1): ?>
-								disabled>
-								<a href="<?php echo SGMB_PRO_URL; ?>" target="_blank" class="sgmb-pro-label-for-visual">PRO</a>
-								<input type="hidden" name="showButtonsOnMobileDirect" value="on">
-							<?php else: ?>
-								>
-							<?php endif; ?>
- 						</div>
-					</div>
-					<div class="sgmb-show-in-popup">
-						<span class="sgmb-label-checkbox">Show inside a popup:</span>
-						<input type="checkbox" name="showButtonsInPopup" 
-						<?php if(@$data['options']['showButtonsInPopup'] == 'on'): ?>
-							checked
-						<?php endif; ?>
-						<?php if(SGMB_PRO != 1): ?>
-							disabled>
-							<a href="<?php echo SGMB_PRO_URL; ?>" target="_blank" class="sgmb-pro-label-for-visual">PRO</a>
-						<?php else: ?>
-							>
-						<?php endif; ?>
-					</div>
+					<img src="<?php echo SGMB_URL."/img/proFeatures.png"?>">
 				</div>
 				<div id="tabs-3" >
 					<div>
@@ -360,6 +295,31 @@
 					<div class="sgmbEffectsContent">
 						<span class="sgmbEffectsLabel">Icons hover effects:</span>
 						<?php echo SgmbAddNewSection::createSelect($iconsEffect, $SGMB_WIDGET_EFFECTS, @$data, 'iconsEffect'); ?>
+					</div>
+				</div>
+				<div id="tabs-5" >
+					<div class="sgmb-title-analytics">
+						<span>Why and How to use</span>
+					</div>
+					<div class="sgmb-text-about-analytics">
+						<span>This tool will help you to track the number of clicks on your social buttons from every page they are on.So you will know how many times your buttons are clicked.</span>
+					</div>
+					<div class="sgmb-text-about-analytics">
+						<span>
+						The only thing you need to do is to create an account in  <a href="https://analytics.google.com" target="_blank">Google Analytics</a>. After, simply insert the account number into the <a href="https://support.google.com/analytics/answer/1032385?hl=en" target="_blank">"Set Account Number" </a> field.
+						<span>
+					</div>
+					<div class="">
+						<span class="sgmb-analytics-options-label">Set Account Number:</span>
+						<input class=""  disabled="disabled" type='text' name="googleAnaliticsAccount" value="<?php echo esc_attr(@$data['options']['googleAnaliticsAccount']); ?>" >
+					</div>
+					<div class="sgmb-text-about-analytics">
+						<span>
+						As a result, you will have the statistics of your social buttons clicks on Google Analytics, like in the picture below.
+						<span>
+					</div>
+					<div class="sgmb-text-about-analytics">
+						<img src="<?php echo SGMB_URL."/img/analytics.png"; ?>" class="sgmb-image-analytics">
 					</div>
 				</div>
 			</div>

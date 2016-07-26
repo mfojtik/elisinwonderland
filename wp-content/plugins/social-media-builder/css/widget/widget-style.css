@@ -1,3 +1,50 @@
+.pro-label-analytics-title
+{
+	color: red;
+}
+
+.sgmb-title-analytics
+{
+	font-size: 28px;
+	font-weight: 800;
+	font-style: oblique;
+	margin-left: 125px;
+	color: #00a0d2;
+}
+
+.sgmb-image-analytics
+{
+	width: 585px;
+	height: 275px;
+}
+
+.sgmb-text-about-analytics
+{
+	margin-top: 20px;
+	display: inline-block;
+	width: 500px;
+}
+
+.sgmb-analytics-options-label
+{
+	margin-top: 40px;
+	display: inline-block;
+	width: 170px;
+    margin-bottom: 20px;
+}
+
+.sgmb-pro-wrapper
+{
+	margin-top: 35px;
+	margin-bottom: 25px;
+	margin-left: 145px;
+}
+
+.sgmb-pro-notice
+{
+	color: red;
+}
+
 .sgmb-show-in-popup
 {
 	margin-top: 20px;

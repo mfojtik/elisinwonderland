@@ -19,7 +19,7 @@ class SgmbAllButtonsSection
 
 	public function renderScripts()
 	{
-		wp_register_script('sgmb-delete-scripts',SGMB_URL.'js/allButtonsSection/sgmb-delete-button.js', array('jquery'),null);
+		wp_register_script('sgmb-delete-scripts',SGMB_URL.'js/allButtonsSection/sgmb-main.js', array('jquery'),null);
 		wp_enqueue_script('sgmb-delete-scripts');
 		wp_register_style('sgmb_widget_style', SGMB_URL.'css/widget/widget-style.css');
 		wp_enqueue_style('sgmb_widget_style');

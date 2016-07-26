@@ -10,6 +10,7 @@ class SGMBButton
 	{
 		add_action('admin_post_save_button',array($this,'widgetSave'));
 		add_action('wp_ajax_delete_button', array($this,'widgetDelete'));
+		add_action('wp_ajax_clone_button', array($this,'widgetClone'));
 		add_action('wp_ajax_close_review_panel', array($this,'closeReviewPanel'));
 	}
 
@@ -26,6 +27,19 @@ class SGMBButton
 			return;
 		}
 		$this->delete($id);
+	}
+
+	public function widgetClone()
+	{
+		check_ajax_referer('sgmb-clone-action');
+		$id = intval($this->sanitize('button_id'));
+		if (!$id) {
+			return;
+		}
+		$data = self::findById($id);
+		$this->setTitle($data->getTitle());
+		$this->setOptions($data->getOptions());
+		$this->save();
 	}
 
 	public function sanitize($optionsKey)
@@ -126,7 +140,7 @@ class SGMBButton
 		$this->setTitle($title);
 		$this->setId($id);
 		$this->setOptions($jsonDataArray);
-		$this->save($button);
+		$this->save();
 		$id = $this->getId();
 		$optionsAsArray = json_decode($this->getOptions(), true);
 		if(@$optionsAsArray['showButtonsOnEveryPost'] == 'on') {
@@ -213,7 +227,7 @@ class SGMBButton
 		return $obj;
 	}
 
-	public function save($button)
+	public function save()
 	{
 		$id = $this->getId();
 		$title = $this->getTitle();
