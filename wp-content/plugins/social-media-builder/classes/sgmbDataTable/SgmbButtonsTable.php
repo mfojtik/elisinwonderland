@@ -37,7 +37,8 @@ class Sgmb_ButtonsView extends SgmbB_Table
 
 		//CSRF token for delete action
 		$ajax_nonce = wp_create_nonce('sgmb-delete-action');
-		$row[3] = '<a href="'.@$editUrl.'">'.__('Edit', 'sgpt').'</a>&nbsp;&nbsp;<a href="#" data-sgmb-csrf-token="'.$ajax_nonce.'" data-sgmb-button-id="'.$id.'" class="sgmb-js-delete-link">'.__('Delete', 'sgmbpt').'</a>';
+		$ajax_nonce_clone = wp_create_nonce('sgmb-clone-action');
+		$row[3] = '<a href="'.@$editUrl.'">'.__('Edit', 'sgpt').'</a>&nbsp;&nbsp;<a href="#" data-sgmb-csrf-token="'.$ajax_nonce.'" data-sgmb-button-id="'.$id.'" class="sgmb-js-delete-link">'.__('Delete', 'sgmbpt').'</a>&nbsp;&nbsp;<a href="#" data-sgmb-csrf-token="'.$ajax_nonce_clone.'" data-sgmb-button-id="'.$id.'" class="sgmb-js-clone-link">'.__('Clone', 'sgpt').'</a>';
 	}
 
 	public function customizeQuery(&$query)
