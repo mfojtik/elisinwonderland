@@ -60,6 +60,9 @@ Its user-friendly interface will allow even those 'non-techie' individuals to us
 * Whats app
 * Reddit
 * Tumblr
+* Line
+* Vkontakte VK
+* StumbleUpon
 
 **Social Media builder PRO functionalities**
 
@@ -68,7 +71,7 @@ Its user-friendly interface will allow even those 'non-techie' individuals to us
 * Floating buttons - Floating Social Bar
 * Button's panel customization
 * Availability to Share custom image
-* 11 Social Button Icons
+* 14 Social Button Icons
 * 16 Themes
 * Insert Social Buttons on custom posts
 * Insert Socail Buttons on every page
@@ -111,6 +114,25 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 4.  Social Buttons visual screen
 
 == Changelog ==
+
+= 1.3.6 =
+* Notification removed from admin panel
+
+= 1.3.5 =
+* Bug fixed connected to Facebook Share button on mobile devices
+
+= 1.3.4 =
+* Bug fixed showing buttons on Android device.
+
+= 1.3.3 =
+* Discount offer.
+
+= 1.3.2 =
+* Stability improvements.
+* New themes added.
+
+= 1.3.1 =
+* Bug fixed connected to post selection, where social buttons should be shown.
 
 = 1.3.0 =
 * Added clone functionlity
@@ -213,4 +235,4 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Upgrade Notice ==
 
-Current version of Social Media is 1.3.0
+Current version of Social Media is 1.3.5

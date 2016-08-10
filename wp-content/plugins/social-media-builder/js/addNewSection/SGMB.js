@@ -1,7 +1,7 @@
 var jQuery = jQuery;
 
 function SGMB() {
-	this.buttons = ['facebook', 'googleplus', 'twitter', 'email', 'linkedin', 'pinterest', 'twitterFollow', 'fbLike', 'whatsapp', 'tumblr', 'reddit'];
+	this.buttons = ['facebook', 'googleplus', 'twitter', 'email', 'linkedin', 'pinterest', 'twitterFollow', 'fbLike', 'whatsapp', 'tumblr', 'reddit', 'line', 'vk', 'stumbleupon'];
 	this.theme = {
 		"classic" : {
 			"socialTheme":"classic",

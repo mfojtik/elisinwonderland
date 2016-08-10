@@ -49,7 +49,7 @@ SGMBButtonPanel.prototype.dragAndDrop = function(sgmbIsPro)
 	var that = this;
 	$($( "li", $gallery )).each(function(index, element) {
 		if(sgmbIsPro != 1) {
-			if(element.id != 'fbLike' && element.id != 'twitterFollow' && element.id != 'whatsapp' && element.id != 'tumblr' && element.id != 'reddit') {
+			if(element.id != 'fbLike' && element.id != 'twitterFollow' && element.id != 'whatsapp' && element.id != 'tumblr' && element.id != 'reddit' && element.id != 'line' && element.id != 'vk' && element.id != 'stumbleupon') {
 				$( element ).draggable({
 					cancel: "a.ui-icon", // clicking an icon won't initiate dragging
 					revert: "invalid", // when not dropped, the item will revert back to its initial position

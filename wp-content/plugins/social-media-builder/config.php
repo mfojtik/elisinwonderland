@@ -7,7 +7,7 @@ define('SGMB_FILES', SGMB_PATH.'files/');
 define('SGMB_CLASSES', SGMB_PATH.'classes/');
 define('SGMB_LIBRARY', SGMB_PATH.'library/');
 define('SGMB_TABLE_LIMIT', 15);
-define('SGMB_SHARE_BUTTON_VERSION', 1.30);
+define('SGMB_SHARE_BUTTON_VERSION', 1.36);
 define('SGMB_DEFAULT_SHARE_URL', "http://google.com");
 define('SGMB_DEFAULT_THEME', "classic");
 define('SGMB_PRO', 0); //  0 -> free, 1 -> pro
@@ -50,7 +50,10 @@ $SGMB_SOCIAL_BUTTONS = array(
 	'twitterFollow',
 	'whatsapp',
 	'tumblr',
-	'reddit'
+	'reddit',
+	'line',
+	'vk',
+	'stumbleupon'
 );
 $SGMB_ADVANCED_NAME_SOCIAL_BUTTONS = array(
 	'facebook' => 'Facebook',
@@ -62,7 +65,10 @@ $SGMB_ADVANCED_NAME_SOCIAL_BUTTONS = array(
 	'fbLike' => 'Facebook Like',
 	'twitterFollow' => 'Twitter Follow',
 	'tumblr' => 'Tumblr',
-	'reddit' => 'Reddit'
+	'reddit' => 'Reddit',
+	'line' => 'Line',
+	'vk' => 'VK',
+	'stumbleupon' => 'StumbleUpon'
 );
 $SGMB_WIDGET_THEMES = array(
 	'classic' => 0, //  0 -> free
