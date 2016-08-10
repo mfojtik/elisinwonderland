@@ -8,6 +8,8 @@
 	<?php if (isset($_GET['saved']) && $_GET['saved']==1): ?>
 		<div id="default-message" class="updated notice notice-success is-dismissible " ><p>Changes were saved</p></div>
 	<?php endif; ?>
+
+
 	<div class="create-title">
 		<div >
 			<h1 class="title-crud"> Create new social buttons </h1>
@@ -65,7 +67,7 @@
 								<?php foreach ($SGMB_SOCIAL_BUTTONS as $value): ?>
 								<li id="<?php echo esc_attr($value); ?>" data-social-button="<?php echo esc_attr($value); ?>" class="ui-widget-content ui-corner-tr js-social-btn js-social-btn-status">
 									<?php if(SGMB_PRO != 1): ?>
-										<?php if($value == 'fbLike' || $value == 'twitterFollow' || $value == 'whatsapp' || $value == 'tumblr' || $value == 'reddit'): ?>
+										<?php if($value == 'fbLike' || $value == 'twitterFollow' || $value == 'whatsapp' || $value == 'tumblr' || $value == 'reddit'  || $value == 'line' || $value == 'vk' || $value == 'stumbleupon'): ?>
 											<img src="<?php echo SGMB_URL."/img/$value".'Pro'.".png"; ?>" class="img-for-drag">
 										<?php else: ?>
 											<img src="<?php echo SGMB_URL."/img/$value.png"; ?>" class="img-for-drag">
@@ -236,9 +238,9 @@
 								$args = array('posts_per_page' => -1); // Set to -1 to remove the limit, default 5
 								$posts = get_posts($args);
 								foreach ($posts as $post) {
-									$postTitle[] = $post->post_title;
+									$selectedKeys[$post->ID] = $post->post_title;
 								}
-								echo SgmbAddNewSection::createMultiSelect('sgmbSelectedPosts', $postTitle, @$data, $classes);
+								echo SgmbAddNewSection::createMultiSelect('sgmbSelectedPosts', $selectedKeys, @$data, $classes);
 							?>
 						</div>
 					</div>
@@ -297,7 +299,7 @@
 						<?php echo SgmbAddNewSection::createSelect($iconsEffect, $SGMB_WIDGET_EFFECTS, @$data, 'iconsEffect'); ?>
 					</div>
 				</div>
-				<div id="tabs-5" >
+				<div id="tabs-5">
 					<div class="sgmb-title-analytics">
 						<span>Why and How to use</span>
 					</div>
@@ -311,7 +313,7 @@
 					</div>
 					<div class="">
 						<span class="sgmb-analytics-options-label">Set Account Number:</span>
-						<input class=""  disabled="disabled" type='text' name="googleAnaliticsAccount" value="<?php echo esc_attr(@$data['options']['googleAnaliticsAccount']); ?>" >
+						<input class="" disabled="disabled" type='text' name="googleAnaliticsAccount" value="<?php echo esc_attr(@$data['options']['googleAnaliticsAccount']); ?>" >
 					</div>
 					<div class="sgmb-text-about-analytics">
 						<span>

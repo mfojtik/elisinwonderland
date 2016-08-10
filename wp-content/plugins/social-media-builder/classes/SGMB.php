@@ -15,13 +15,14 @@ class SGMB
 		add_action('media_buttons', array($this, 'mediaButtons'), 11);
 		add_action('admin_enqueue_scripts',  array($this, 'wptuts_add_color_picker'));
 		add_filter('the_content', array($this, 'buttonsShowOnEveryPost'));
+
 		$sgmbButton = new SGMBButton();
 		$sgmbButton->init();
 	}
 
-	public function buttonsShowOnEveryPost( $content )
+	public function buttonsShowOnEveryPost($content)
 	{
-		$postTitle = get_the_title();
+		$postID = get_the_ID();
 		$id = get_option('SGMB_SHARE_BUTTON_ID');
 		$obj = SGMBButton::findById($id);
 		if($obj) {
@@ -39,8 +40,8 @@ class SGMB
 					$sgmbPosition = 'sgmb-right';
 					break;
 			}
-			if(@$data['showButtonsOnEveryPost'] == 'on') {
-				if(@$data['showOnAllPost'] == 'on') {
+			if(@$data['showButtonsOnEveryPost'] == 'on' ) {
+				if(@$data['showOnAllPost'] == 'on' && !is_page()) {
 					$content .= "<div class = 'socialMediaOnEveryPost'>";
 					$content .= @$textBeforeSocialMedia;
 					$content .= do_shortcode( "[sgmb id=$id]" );
@@ -49,7 +50,7 @@ class SGMB
 				}
 				else {
 					foreach ($postsTitleInData as  $postTitleInData) {
-						if(!is_home() && $postTitle == $postTitleInData) {
+						if(!is_home() && $postID == $postTitleInData) {
 							$content .= "<div class = 'socialMediaOnEveryPost'>";
 							$content .= @$textBeforeSocialMedia;
 							$content .= do_shortcode( "[sgmb id=$id]" );

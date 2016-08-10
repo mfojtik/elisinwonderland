@@ -59,14 +59,14 @@ class SGMBButton
 	{
 		//CSRF check
 		if(!check_admin_referer('save_button', 'wp-nonce-token')) {
-			wp_die('Security check fail'); 
+			wp_die('Security check fail');
 		}
 		$options = array();
 		$buttons = array();
 		$selectedPosts = array();
-		
+
 		$sgmbSelectedPosts = explode(",", $this->sanitize('sgmb-all-selected-post'));
-		
+
 		$button = explode(',',sanitize_text_field($_POST['button']));
 		foreach ($button as $value) {
 			if($value == 'twitterFollow') {
@@ -214,7 +214,7 @@ class SGMBButton
 		}
 		return $arr;
 	}
-	
+
 	private static function buttonObjectFromArray($arr, $obj = null)
 	{
 		$jsonData = json_decode($arr['options'], true);

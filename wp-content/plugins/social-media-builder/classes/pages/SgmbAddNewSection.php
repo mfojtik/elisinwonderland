@@ -94,21 +94,23 @@ class SgmbAddNewSection
 	public static function createMultiSelect($fieldName, $selectedKeys, $data, $classes)
 	{	
 		$html = "<select  data-selectbox='".$fieldName."' class='".$classes."' multiple='multiple'>";
+
 		foreach ($selectedKeys as $key => $value) {
+
 			if(!is_array($value)) {
-				$html .= "<option value = '$value'" ;
+				$html .= "<option value = '$key'" ;
 				// if multi select element
 				if($fieldName == 'sgmbSelectedPosts' || $fieldName == 'sgmbSelectedPages') { 
 					if(@$data['options'][$fieldName] != null) {
 						foreach (@$data['options'][$fieldName] as  $option) {
-							if($option == $value) {  
+							if($option == $key) {  
 								$html .= "selected"; 
 							}
 						}
 					}
 					else {
 						foreach ($selectedKeys as $option) {
-							if($option == $value) {
+							if($option == $key) {
 								$html .= "selected";
 							}
 						}
