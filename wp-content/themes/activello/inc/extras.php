@@ -68,7 +68,7 @@ function activello_custom_password_form() {
   $o = '<form class="protected-post-form" action="' . get_option('siteurl') . '/wp-login.php?action=postpass" method="post">
   <div class="row">
     <div class="col-lg-10">
-        ' . esc_html__( "<p>This post is password protected. To view it please enter your password below:</p>" ,'activello') . '
+        <p>' . esc_html__( "This post is password protected. To view it please enter your password below:" ,'activello') . '</p>
         <label for="' . $label . '">' . esc_html__( "Password:" ,'activello') . ' </label>
       <div class="input-group">
         <input class="form-control" value="' . get_search_query() . '" name="post_password" id="' . $label . '" type="password">
@@ -92,17 +92,32 @@ if ( ! function_exists( 'activello_header_menu' ) ) :
  * Header menu (should you choose to use one)
  */
 function activello_header_menu() {
-  // display the WordPress Custom Menu if available
-  wp_nav_menu(array(
-    'menu'              => 'primary',
-    'theme_location'    => 'primary',
-    'depth'             => 2,
-    'container'         => 'div',
-    'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
-    'menu_class'        => 'nav navbar-nav',
-    'fallback_cb'       => 'activello_wp_bootstrap_navwalker::fallback',
-    'walker'            => new activello_wp_bootstrap_navwalker()
-  ));
+    
+    if( has_nav_menu('primary')){
+        
+        // display the WordPress Custom Menu if available
+        wp_nav_menu(array(
+            'menu'              => 'primary',
+            'theme_location'    => 'primary',
+            'depth'             => 3,
+            'container'         => 'div',
+            'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+            'menu_class'        => 'nav navbar-nav',
+            'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+            'walker'            => new activello_wp_bootstrap_navwalker()
+        ));
+  
+    }else{
+            echo '<ul id="menu-all-pages" class="nav navbar-nav">';
+            wp_list_pages(array(
+                'depth' => 1, //number of tiers, 0 for unlimited
+                'exclude' => '', //comma seperated IDs of pages you want to exclude
+                'title_li' => '', //must override it to empty string so that it does not break our nav
+                'sort_column' => 'post_title', //see documentation for other possibilites
+                'sort_order' => 'ASC', //ASCending or DESCending
+            ));
+            echo '</ul>';
+    }
 } /* end header menu */
 endif;
 
@@ -119,10 +134,9 @@ function activello_featured_slider() {
     echo '<div class="flexslider">';
       echo '<ul class="slides">';
 
-        $count = 4;
         $slidecat = get_theme_mod( 'activello_featured_cat' );
 
-        $query = new WP_Query( array( 'cat' => $slidecat,'posts_per_page' => $count ) );
+        $query = new WP_Query( array( 'cat' => $slidecat,'posts_per_page' => -1 ) );
         if ($query->have_posts()) :
           while ($query->have_posts()) : $query->the_post();
                 
@@ -323,3 +337,37 @@ if (!function_exists('get_activello_theme_setting'))  {
   }
 }
 add_action('wp_head','get_activello_theme_setting',10);
+
+/**
+ * Adds the URL to the top level navigation menu item
+ */
+function  activello_add_top_level_menu_url( $atts, $item, $args ){
+  if ( !wp_is_mobile() && isset($args->has_children) && $args->has_children  ) {
+    $atts['href'] = ! empty( $item->url ) ? $item->url : '';
+  }
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'activello_add_top_level_menu_url', 99, 3 );
+
+/**
+ * Makes the top level navigation menu item clickable
+ */
+function activello_make_top_level_menu_clickable(){
+if ( !wp_is_mobile() ) { ?>
+  <script type="text/javascript">
+    jQuery( document ).ready( function( $ ){
+      if ( $( window ).width() >= 767 ){
+        $( '.navbar-nav > li.menu-item > a' ).click( function(){
+            if( $( this ).attr('target') !== '_blank' ){
+                window.location = $( this ).attr( 'href' );
+            }else{
+                var win = window.open($( this ).attr( 'href' ), '_blank');
+                win.focus();
+            }
+        });
+      }
+    });
+  </script>
+<?php }
+}
+add_action('wp_footer', 'activello_make_top_level_menu_clickable', 1);

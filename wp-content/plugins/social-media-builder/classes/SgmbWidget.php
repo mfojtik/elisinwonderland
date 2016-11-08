@@ -76,6 +76,7 @@ class SgmbWidget extends WP_Widget
 		}
 		$postUrl = get_permalink();
 		$data = $this->getData($args['id']);
+		$data['options']['shareText'] = htmlspecialchars_decode($data['options']['shareText'], ENT_QUOTES);
 		if(!empty($data)) {
 			$html = $this->prepareWidget($data);
 			$html .=  $this->showWidget(json_encode($data), self::$widgetCounter, $postImage, $postUrl);
@@ -142,6 +143,8 @@ class SgmbWidget extends WP_Widget
 		wp_enqueue_style('sgmb_socialFont_style');
 		wp_register_script('sgmb-jssocial1-scripts', SGMB_URL.'js/jssocials.min.js', array('jquery'),null);
 		wp_enqueue_script('sgmb-jssocial1-scripts');
+		wp_register_script('sgmb-jssocial2-scripts', SGMB_URL.'js/jssocials.shares.js', array('jquery'),null);
+		wp_enqueue_script('sgmb-jssocial2-scripts');
 		wp_register_script('sgmb-drop_down-scripts',SGMB_URL.'js/simple.dropdown.js', array('jquery'),null);
 		wp_enqueue_script('sgmb-drop_down-scripts');
 		wp_register_style('sgmb_social2_style',SGMB_URL.'css/jssocial/jssocials.css');

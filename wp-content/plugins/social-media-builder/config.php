@@ -1,13 +1,13 @@
 <?php
 define('SGMB_PATH', dirname(__FILE__).'/');
 define('SGMB_URL', plugins_url('', __FILE__).'/');
-define('SGMB_ADMIN_URL', admin_url().'/');
+define('SGMB_ADMIN_URL', admin_url());
 define('SGMB_VIEW', SGMB_PATH.'view/');
 define('SGMB_FILES', SGMB_PATH.'files/');
 define('SGMB_CLASSES', SGMB_PATH.'classes/');
 define('SGMB_LIBRARY', SGMB_PATH.'library/');
 define('SGMB_TABLE_LIMIT', 15);
-define('SGMB_SHARE_BUTTON_VERSION', 1.36);
+define('SGMB_SHARE_BUTTON_VERSION', 1.47);
 define('SGMB_DEFAULT_SHARE_URL', "http://google.com");
 define('SGMB_DEFAULT_THEME', "classic");
 define('SGMB_PRO', 0); //  0 -> free, 1 -> pro
@@ -18,7 +18,7 @@ global $SGMB_WIDGET_THEMES;
 global $SGMB_SOCIAL_BUTTONS;
 global $SGMB_WIDGET_EFFECTS;
 
-$SGMB_BUTTON_FONT_SIZE = array('8', '10', '12', '14', '16', '18', '20', '22', '24');
+$SGMB_BUTTON_FONT_SIZE = array('8', '10', '12', '14', '16', '18', '20', '22', '24', '26');
 $SGMB_FONT_SIZE_FOR_SHARE_LIST = array('8', '10', '12', '14', '16', '18');
 $SGMB_WIDGET_EFFECTS = array(
 	'Free' => array(
@@ -46,6 +46,7 @@ $SGMB_SOCIAL_BUTTONS = array(
 	'googleplus',
 	'email',
 	'pinterest',
+	'mewe',
 	'fbLike',
 	'twitterFollow',
 	'whatsapp',
@@ -63,6 +64,7 @@ $SGMB_ADVANCED_NAME_SOCIAL_BUTTONS = array(
 	'email' => 'E-mail',
 	'pinterest' => 'Pinterest',
 	'fbLike' => 'Facebook Like',
+	'mewe' => 'MeWe',
 	'twitterFollow' => 'Twitter Follow',
 	'tumblr' => 'Tumblr',
 	'reddit' => 'Reddit',

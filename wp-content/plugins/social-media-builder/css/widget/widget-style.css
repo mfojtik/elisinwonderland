@@ -14,15 +14,14 @@
 
 .sgmb-image-analytics
 {
-	width: 585px;
-	height: 275px;
+	width: 100%;
 }
 
 .sgmb-text-about-analytics
 {
 	margin-top: 20px;
 	display: inline-block;
-	width: 500px;
+	width: 100%;
 }
 
 .sgmb-analytics-options-label
@@ -50,46 +49,46 @@
 	margin-top: 20px;
 }
 
-#sgmb-plugins-wrapper 
+#sgmb-plugins-wrapper
 {
 	width: 90%;
 	margin: 0 auto;
 	padding-top: 30px;
 }
 
-.plugin-icon 
+.plugin-icon
 {
 	top: 0px !important;
 	left: 10px !important;
 }
 
-.plugin-card  
+.plugin-card
 {
-	min-height:200px !important;	
+	min-height:200px !important;
 }
 
-.plugin-card .desc  
+.plugin-card .desc
 {
 	margin-right: 0px;
 }
 
-.plugin-card-top 
+.plugin-card-top
 {
 	padding-top: 0px !important;
 }
 
-.plugin-card .compatibility-compatible:before 
+.plugin-card .compatibility-compatible:before
 {
    content: "\f147" !important;
 }
 
-#sgmb-plugins-wrapper .column-compatibility 
+#sgmb-plugins-wrapper .column-compatibility
 {
 	width: 100%;
 	text-align: inherit;
 }
 
-#sgmb-plugins-wrapper .plugin-card 
+#sgmb-plugins-wrapper .plugin-card
 {
 	cursor: pointer;
 }
@@ -530,13 +529,6 @@
 }
 
 .ui-widget-content { background: none; }
-
-.header input
-{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 791px;
-}
 
 .btnLabel
 {

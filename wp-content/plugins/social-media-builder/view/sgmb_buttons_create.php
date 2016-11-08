@@ -99,7 +99,7 @@
 					</div>
 					<div id="accordion">
 						<?php foreach ($SGMB_SOCIAL_BUTTONS as $value): ?>
-							<h3 class="<?php echo esc_attr($value); ?>"><?php echo $SGMB_ADVANCED_NAME_SOCIAL_BUTTONS[$value] ?></h3>
+							<h3 class="<?php echo esc_attr($value); ?>"><?php echo @$SGMB_ADVANCED_NAME_SOCIAL_BUTTONS[$value] ?></h3>
 							<div class="<?php echo esc_attr($value); ?>">
 								<p>
 								<?php

@@ -102,6 +102,8 @@ class SGMBButton
 			}
 		}
 
+		$shareText = htmlentities(stripslashes(@$_POST['shareText']), ENT_QUOTES);
+		$_POST['shareText'] = $shareText;
 		$options = array(
 			'currentUrl'  => $this->sanitize('currentUrl'),
 			'url'=>$this->sanitize('url'),

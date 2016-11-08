@@ -1,7 +1,7 @@
 var jQuery = jQuery;
 
 function SGMB() {
-	this.buttons = ['facebook', 'googleplus', 'twitter', 'email', 'linkedin', 'pinterest', 'twitterFollow', 'fbLike', 'whatsapp', 'tumblr', 'reddit', 'line', 'vk', 'stumbleupon'];
+	this.buttons = ['facebook', 'googleplus', 'twitter', 'email', 'linkedin', 'pinterest', 'mewe', 'twitterFollow', 'fbLike', 'whatsapp', 'tumblr', 'reddit', 'line', 'vk', 'stumbleupon'];
 	this.theme = {
 		"classic" : {
 			"socialTheme":"classic",
@@ -32,22 +32,22 @@ function SGMB() {
 	this.buttonPanel = new SGMBButtonPanel();
 }
 
-SGMB.prototype.init = function(data, sgmbIsPro) 
+SGMB.prototype.init = function(data, sgmbIsPro)
 {
-	this.initTabs(); 
-	this.initDragAndDrop(sgmbIsPro); 
+	this.initTabs();
+	this.initDragAndDrop(sgmbIsPro);
 	this.initAccordion();
 	this.livePreview.init();
 	this.setButtonInArray(data);
 	this.initButtonOptions();
 }
 
-SGMB.prototype.getLivePreview = function() 
+SGMB.prototype.getLivePreview = function()
 {
 	return this.livePreview;
 }
 
-SGMB.prototype.setButtonInArray = function(data) 
+SGMB.prototype.setButtonInArray = function(data)
 {
 	for (var buttonName in data.button) {
 		var button = data.button[buttonName];
@@ -55,7 +55,7 @@ SGMB.prototype.setButtonInArray = function(data)
 	}
 }
 
-SGMB.prototype.initAccordion = function() 
+SGMB.prototype.initAccordion = function()
 {
 	var that = this;
 	jQuery( "#accordion" ).accordion({
@@ -66,20 +66,20 @@ SGMB.prototype.initAccordion = function()
 	});
 }
 
-SGMB.prototype.initButtonOptions = function() 
+SGMB.prototype.initButtonOptions = function()
 {
 	var that = this;
 	jQuery('.ui-widget-content').on('optionsFadeIn', function(e){
-		var id = jQuery(this).attr('id'); 
+		var id = jQuery(this).attr('id');
 		that.showAdvancedOption(id);
 	});
 
 	jQuery('.ui-widget-content').on('optionsFadeOut', function(e, param){
-		var id = jQuery(this).attr('id'); 
+		var id = jQuery(this).attr('id');
 		that.hideAdvancedOption(id);
 		var selButtons = that.buttonPanel.getSelButtons();
 		if(selButtons.length != 0) {
-			if(selButtons[0] == id) { 
+			if(selButtons[0] == id) {
 				that.showAdvancedOption(selButtons[1]);
 			}
 			else {
@@ -89,25 +89,25 @@ SGMB.prototype.initButtonOptions = function()
 	});
 }
 
-SGMB.prototype.initTabs = function() 
+SGMB.prototype.initTabs = function()
 {
 	jQuery( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
 	jQuery( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 }
 
-SGMB.prototype.initDragAndDrop = function(sgmbIsPro) 
+SGMB.prototype.initDragAndDrop = function(sgmbIsPro)
 {
 	this.buttonPanel.dragAndDrop(sgmbIsPro);
 }
 
-SGMB.prototype.showAdvancedOption = function(id) 
+SGMB.prototype.showAdvancedOption = function(id)
 {
 	jQuery('.'+id).show();
 	jQuery( "#accordion" ).accordion("refresh");
 	jQuery('.'+id).click();
 }
 
-SGMB.prototype.hideAdvancedOption = function(id) 
+SGMB.prototype.hideAdvancedOption = function(id)
 {
 	jQuery('.'+id).hide();
 }

@@ -1,6 +1,6 @@
 <?php
 
-require_once('ListTable.php');
+require_once(dirname(__FILE__).'/ListTable.php');
 
 class SgmbB_Table extends SgmbB_ListTable
 {
