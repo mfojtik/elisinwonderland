@@ -1,7 +1,38 @@
-.jssocials-share-whatsapp .jssocials-share-link 
+.jssocials-share-line .jssocials-share-link {
+  background: #25af00;
+  border: 1px solid #209600; }
+  .jssocials-share-line .jssocials-share-link:hover {
+    background: #1a7c00; }
+
+.jssocials-share-stumbleupon .jssocials-share-link {
+  background: #eb4823;
+  border: 1px solid #e03a14; }
+  .jssocials-share-stumbleupon .jssocials-share-link:hover {
+    background: #c93412; }
+
+.jssocials-share-vk .jssocials-share-link {
+  background: #45668e;
+  border: 1px solid #45668e; }
+  .jssocials-share-vk .jssocials-share-link:hover {
+    background: #2d4373; }
+
+.jssocials-share-reddit .jssocials-share-link {
+  background: #FF4500;
+  border: 1px solid #FF4500; }
+  .jssocials-share-reddit .jssocials-share-link:hover {
+    background: #E02903; }
+
+
+.jssocials-share-tumblr .jssocials-share-link {
+  background: #36465D;
+  border: 1px solid #36465D; }
+  .jssocials-share-tumblr .jssocials-share-link:hover {
+    background: #23334A; }
+
+.jssocials-share-whatsapp .jssocials-share-link
 {
   background: #29a628;
-  border: 1px solid #249123; 
+  border: 1px solid #249123;
 }
 
 .jssocials-share-whatsapp .jssocials-share-link:hover { background: #1f7d1e; }
@@ -17,6 +48,12 @@
   border: 1px solid #344e86; }
   .jssocials-share-facebook .jssocials-share-link:hover {
     background: #2d4373; }
+
+.jssocials-share-mewe .jssocials-share-link {
+  background: #10768E;
+  border: 1px solid #10768E; }
+  .jssocials-share-mewe .jssocials-share-link:hover {
+    background: #0E6477; }
 
 .jssocials-share-googleplus .jssocials-share-link {
   background: #dd4b39;

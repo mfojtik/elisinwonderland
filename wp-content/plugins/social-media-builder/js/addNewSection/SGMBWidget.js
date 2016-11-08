@@ -417,7 +417,7 @@ SGMBWidget.prototype.changeDropdownLabelSize = function(fontSize)
 SGMBWidget.prototype.changeToRoundButtons = function(inputValue)
 {
 	if(inputValue == true) {
-		jQuery('#sgmbShare'+this.id+'-'+this.widgetCounter+' a').css({'border-radius': "50%"});
+		jQuery('#sgmbShare'+this.id+'-'+this.widgetCounter+' a').css({'border-radius': "50px",'-webkit-border-radius': '50px','-moz-border-radius': '50px','-o-border-radius': '50px'});
 	}
 	else {
 		jQuery('#sgmbShare'+this.id+'-'+this.widgetCounter+' a').css({'border-radius': "0.3em"});

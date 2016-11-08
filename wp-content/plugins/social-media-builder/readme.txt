@@ -4,19 +4,19 @@ Contributors: Social Media By Sygnoos, Support by Sygnoos
 Donate link: https://sygnoos.com/
 Tags: social, social follow, social following, social links, social media, social media buttons, social media icons, social media widget, social share, social sharing, social widget, social media, floating buttons, facebook, twitter, social bar, anlytics, linkedin, pinterest, AddThis
 Requires at least: 3.8
-Tested up to: 4.5.3
+Tested up to: 4.6.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Social plugin provides you with many social networks, effects, dozens of themes and many other awesome options to make your page more shareable.
+Social Buttons plugin provides you with many social buttons, effects, themes, popup and other awesome options to make your page more shareable.
 
 == Description ==
 
 ### Social Media 
 
-This plugin gives you an opportunity to add social icons to your page and make it shareable. Our plugin provides you with 6 social networks, 12 panel Effects and many other awesome options that can make your work easier and more effective.
-In the Pro Version of this plugin you can have 11 social networks, 16 panel Effects and even more, you can choose the images you want to be shared on your website!
+This plugin gives you an opportunity to add social icons to your page and make it shareable. Our plugin provides you with 7 social networks, 12 panel Effects and many other awesome options that can make your work easier and more effective.
+In the Pro Version of this plugin you can have 13 social networks, 16 panel Effects and even more, you can choose the images you want to be shared on your website!
 
 You know what's the not-so-good aspect of blogging? It can be tedious and will consume our time quickly like a wildfire burning a forest. What more if you want to encourage readers to share some contents of your blogs to different social media platforms? Well, I have good news for you, it is now possible to do all those tasks with less hassle when using the Social Media Builder. Want to know more about it? I'd be happy to share the details.
 
@@ -31,6 +31,7 @@ From simple to fancy but useful, yes, you can transform your website. This plugi
 * Pinterest
 * Twitter
 * LinkedIn
+* MeWe
 * Email
 
 If you think that you do not have the power to choose which among the social media platforms above to use in your posts, that's not the case here as you can enable or disable each of them. This will give you the freedom to decide which social media sites will best contain a certain blog topic that you will be posting.
@@ -63,6 +64,7 @@ Its user-friendly interface will allow even those 'non-techie' individuals to us
 * Line
 * Vkontakte VK
 * StumbleUpon
+* MeWe
 
 **Social Media builder PRO functionalities**
 
@@ -71,7 +73,7 @@ Its user-friendly interface will allow even those 'non-techie' individuals to us
 * Floating buttons - Floating Social Bar
 * Button's panel customization
 * Availability to Share custom image
-* 14 Social Button Icons
+* 15 Social Button Icons
 * 16 Themes
 * Insert Social Buttons on custom posts
 * Insert Socail Buttons on every page
@@ -115,11 +117,42 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Changelog ==
 
+= 1.4.7 =
+* Bug fixed connected to admin URL path.
+* UI improvements.
+
+= 1.4.6 =
+* Bug fixed connected to data tables.
+* CSS modifications.
+
+= 1.4.5 =
+* Bug fixing connected to social share counts.
+
+= 1.4.4 =
+* Bug fixing connected to border radius.
+
+= 1.4.3 =
+* Bug fixing and code optimization.
+
+= 1.4.2 =
+* Bug fixed connected to share text with single quotes.
+
+= 1.4.1 =
+* New font size option added.
+
+= 1.3.8 =
+* Image optimization.
+* CSS bug fixed.
+
+= 1.3.7 =
+* New social network added MeWe.
+* Bug fixed with twitter sharing text.
+
 = 1.3.6 =
-* Notification removed from admin panel
+* Notification removed from admin panel.
 
 = 1.3.5 =
-* Bug fixed connected to Facebook Share button on mobile devices
+* Bug fixed connected to Facebook Share button on mobile devices.
 
 = 1.3.4 =
 * Bug fixed showing buttons on Android device.
@@ -135,8 +168,8 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 * Bug fixed connected to post selection, where social buttons should be shown.
 
 = 1.3.0 =
-* Added clone functionlity
-* UI changes
+* Added clone functionlity.
+* UI changes.
 
 = 1.2.9 =
 * PHP notice was fixed inside Widget section.
@@ -235,4 +268,4 @@ Social MediaF.A.Q.= What is Social Media for? =* You can make your pages mor
 
 == Upgrade Notice ==
 
-Current version of Social Media is 1.3.5
+Current version of Social Media is 1.4.6

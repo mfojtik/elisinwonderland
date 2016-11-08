@@ -31,33 +31,33 @@ class SgmbAddNewSection
 		else {
 			$html .= ">";
 		}
-		
+
 		foreach ($selectedKey as $key => $value) {
 			if(!is_array($value)) {
 				$html .= "<option value = '$value'" ;
-				if($buttonName == 'fbLike') { 
+				if($buttonName == 'fbLike') {
 					if($value == @$data['buttonOptions'][$buttonName][$optionType]) {
 						$html .= "selected";
 					}
 				}
 				// if multi select element
-				if($optionType == 'sgmbSelectedPosts') { 
+				if($optionType == 'sgmbSelectedPosts') {
 					if(@$data['options'][$optionType] != null) {
 						foreach (@$data['options'][$optionType] as  $option) {
-							if($option == $value) {  
-								$html .= "selected"; 
+							if($option == $value) {
+								$html .= "selected";
 							}
 						}
 					}
 					else {
 						foreach ($selectedKey as $option) {
-							if($option == $value) {  
-								$html .= "selected"; 
+							if($option == $value) {
+								$html .= "selected";
 							}
 						}
 					}
 				}
-				elseif($value == @$data['options'][$optionType]) { 
+				elseif($value == @$data['options'][$optionType]) {
 					$html .= "selected";
 				}
 				$html .= ">$value</option>";
@@ -72,13 +72,13 @@ class SgmbAddNewSection
 					if(SGMB_PRO == 0 && $key == 'Pro' && $showOptionsGroup == true) {
 						$html .= "disabled";
 					}
-					if($buttonName == 'fbLike') { 
+					if($buttonName == 'fbLike') {
 						if($option == @$data['buttonOptions'][$buttonName][$optionType]) {
 							$html .= "selected";
 						}
 					}
-					if($option == @$data['options'][$optionType]) { 
-						$html .= "selected"; 
+					if($option == @$data['options'][$optionType]) {
+						$html .= "selected";
 					}
 					$html .= ">$option</option>";
 				}
@@ -92,7 +92,7 @@ class SgmbAddNewSection
 	}
 
 	public static function createMultiSelect($fieldName, $selectedKeys, $data, $classes)
-	{	
+	{
 		$html = "<select  data-selectbox='".$fieldName."' class='".$classes."' multiple='multiple'>";
 
 		foreach ($selectedKeys as $key => $value) {
@@ -100,11 +100,11 @@ class SgmbAddNewSection
 			if(!is_array($value)) {
 				$html .= "<option value = '$key'" ;
 				// if multi select element
-				if($fieldName == 'sgmbSelectedPosts' || $fieldName == 'sgmbSelectedPages') { 
+				if($fieldName == 'sgmbSelectedPosts' || $fieldName == 'sgmbSelectedPages') {
 					if(@$data['options'][$fieldName] != null) {
 						foreach (@$data['options'][$fieldName] as  $option) {
-							if($option == $key) {  
-								$html .= "selected"; 
+							if($option == $key) {
+								$html .= "selected";
 							}
 						}
 					}
@@ -116,7 +116,7 @@ class SgmbAddNewSection
 						}
 					}
 				}
-				elseif($value == @$data['options'][$fieldName]) { 
+				elseif($value == @$data['options'][$fieldName]) {
 					$html .= "selected";
 				}
 				$html .= ">$value</option>";
@@ -125,7 +125,7 @@ class SgmbAddNewSection
 		$html .= "</select>";
 		return $html;
 	}
-	
+
 	public function getData()
 	{
 		$data = array();
@@ -148,7 +148,10 @@ class SgmbAddNewSection
 	public function renderOptions($name)
 	{
 		$data = $this->getData();
-		include(SGMB_VIEW.'option-pages/'.$name.'.php');
+		$filePath = SGMB_VIEW.'option-pages/'.$name.'.php';
+		if (file_exists($filePath)) {
+			include($filePath);
+		}
 	}
 
 	public static function renderScripts($themeType )
@@ -187,6 +190,8 @@ class SgmbAddNewSection
 		wp_enqueue_script('sgmb-dropdown-scripts');
 		wp_register_script('sgmb-jssocial1-scripts', SGMB_URL.'js/jssocials.min.js', array('jquery'),null);
 		wp_enqueue_script('sgmb-jssocial1-scripts');
+		wp_register_script('sgmb-jssocial2-scripts', SGMB_URL.'js/jssocials.shares.js', array('jquery'),null);
+		wp_enqueue_script('sgmb-jssocial2-scripts');
 		wp_register_script('sgmb-classLive-scripts', SGMB_URL.'js/addNewSection/SGMBLivePreview.js', array('jquery'),null);
 		wp_enqueue_script('sgmb-classLive-scripts');
 	}

@@ -2,8 +2,8 @@
 
 Theme Name: Activello
 Theme URI: http://colorlib.com/wp/Activello/
-Version: 1.0.2
-Tested up to: WP 4.4
+Version: 1.1.1
+Tested up to: WP 4.6
 
 Author: Aigars Silkalns
 Author URI: http://colorlib.com/wp/
@@ -61,6 +61,27 @@ Afterwards you can continue theme setup and customization via WordPress Dashboar
 Theme documentation is available on http://colorlib.com/wp/support/activello
 
 /*========= Changelog =========*/
+
+= 1.1.0 - 11.10.2016 =
+
+* Updated Bootstrap to 3.3.7
+* Updated Font Awesome to 4.6.3
+* Updated FlexSlider to 2.6.3
+
+= 1.1.0 - 11.10.2016 =
+
+* Added Link to documentation
+* Fixed compatibility errors with the WP 4.6 and PHP 7.
+* Now you can use unlimited number of slides on Slider
+* Other minor code tweaks and improvements
+* Added French translation thanks to Eddy Lelièvre-Berna
+* Added Greek translation thanks to Tsakman
+* Added Slovak translation thanks to Marek
+
+= 1.0.3 - 28.06.2016 =
+
+* Added TGMPA & Kiwi Social Share Plugin
+* Updated theme tags
 
 = 1.0.2 - 17.02.2016 =
 

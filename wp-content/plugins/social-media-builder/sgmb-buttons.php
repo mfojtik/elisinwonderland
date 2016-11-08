@@ -2,8 +2,8 @@
 /**
 * Plugin Name: Social
 * Plugin URI:  http://plugins.sygnoos.com/wordpress-social-buttons/
-* Description: Social media share buttons.
-* Version:     1.3.6
+* Description: Social Buttons plugin provides you with many social buttons, effects, themes, popup and other awesome options to make your page more shareable.
+* Version:     1.4.7
 * Author:      Sygnoos
 * Author URI:  https://www.sygnoos.com
 */

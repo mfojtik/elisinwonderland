@@ -6,7 +6,7 @@
  */
 class activello_recent_posts extends WP_Widget
 {
-	 function activello_recent_posts(){
+	 function __construct(){
 
         $widget_ops = array('classname' => 'activello-recent-posts','description' => esc_html__( "Activello recent posts widget with thumbnails", 'activello') );
 		    parent::__construct('activello_recent_posts', esc_html__('Activello Recent Posts Widget','activello'), $widget_ops);
@@ -33,7 +33,7 @@ class activello_recent_posts extends WP_Widget
                 <?php
 
                   $featured_args = array(
-                      'posts_per_page' => $limit + 1 ,
+                      'posts_per_page' => $limit,
                       'ignore_sticky_posts' => 1
                     );
 
